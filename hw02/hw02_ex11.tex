@@ -1,0 +1,19 @@
+\item [3.11] Consider the equation
+
+\begin{equation*}
+ x[n] = A^n x[0] + A^{n-1} b u[0]+ A^{n-2} b u[1]+ \dots A b u[n-2]+ b u[n-1]
+\end{equation*}
+
+where A is an $n \times n$ matrix and $b$ is an $n \times 1$ column vector.
+Under what conditions on $A$ and $b$ will there exist $u[0], u[1], \dots, u[n-1]$ to meet the equation for any $x[n]$ and $x[0]$?
+\emph{Hint}: Write the equation in the form
+
+\begin{equation*}
+ x[n] - A^n x[0] = [b \/ Ab \/ \dots A^{n-1}b]
+ \begin{bmatrix}
+ u[n-1]\\
+ u[n-1]\\
+ \vdots \\
+ u[0]\\
+\end{bmatrix}
+\end{equation*}

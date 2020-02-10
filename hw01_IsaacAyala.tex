@@ -1,0 +1,383 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,12pt]{scrartcl}
+
+\usepackage{xltxtra}
+
+\input{../preamble.tex}
+
+% \usepackage[spanish]{babel}
+
+% \setromanfont[Mapping=tex-text]{Linux Libertine O}
+% \setsansfont[Mapping=tex-text]{DejaVu Sans}
+% \setmonofont[Mapping=tex-text]{DejaVu Sans Mono}
+
+\title{Homework \#01: Solutions to chapter 2 exercises}
+\author{Isaac Ayala Lozano}
+\date{2020-01-24}
+
+\begin{document}
+\maketitle
+
+Presented below are the answers to exercises 2.1 through 2.12 from Chapter 2 in \cite{chen1999linear}.
+
+\begin{enumerate}
+% 2.1
+ \item System (a)'s output is described with a function of the form $y(u) = mu$, where m is a constant.
+ Testing the system to verify the propery of superposition, the system is shown to be \emph{linear}.
+
+ \begin{align*}
+  \alpha y(u) = \alpha mu  & \quad  y(\alpha u) =  m \alpha  u \\
+  \alpha y(u) &= y(\alpha u)\\
+  y(u_1) &= m u_1 \\
+  y (u_1 + u_2) &= m (u_1 + u_2)\\
+  y(u_1) + y(u_2) &= m u_1 + mu_2\\
+  y (u_1 + u_2) &= y(u_1) + y(u_2)
+ \end{align*}
+
+The output of system (b) is described by a function $y(u) = m u + y_0$.
+It is sufficient to test additivity to prove that the system is \emph{nonlinear}.
+
+\begin{align*}
+ y(u_1) = m u_1 + y_0 & \quad y(u_2) = m u_2 + y_0 \\
+ y(u_1) + y(u_2) &= m (u_1 +u_2) + 2y_0\\
+ y (u_1 + u_2) &= m ( u_1 + u_2) + y_0\\
+ y(u_1) + y(u_2)  &\neq y (u_1 + u_2)
+\end{align*}
+
+System (c) is described by a function $y(u) = f(u)$.
+It is observed that $y \in (-k, k), u \in (-\infty, \infty)$.
+Consider a case where $y(u) = k$ and test for the property of superposition.
+The system is \emph{nonlinear}.
+
+\begin{align*}
+ \alpha y(u) &= \alpha k\\
+ y (\alpha u) &= k\\
+ \alpha y(u) &\neq y(\alpha u)
+\end{align*}
+
+ System (b) could be linearized by defining a new operating point/defining a new output $\bar y$, where $\bar y = y - y_0$.
+%  2.2
+ \item The ideal low pass filter is not a causal system.
+ Given $t < t_0$, the system would be presenting an output to a time in the future instead of the present and past values.
+ It is impossible to construct a non-causal system in the real world.
+%  2.3
+\item The system is linear.
+Consider $u_1 \neq u_2$ and verify that the system posseses the propery of superposition.
+\begin{align*}
+\text{Assuming} \quad t < \alpha & \\
+ y_1 = y(u_1) = u_1(t) & \quad y_2 = y(u_2) = u_2(t)\\
+ y_1 + y_2 &= u_1(t) + u_2(t) \\
+ y(u_1 + u_2) &= u_1(t) + u_2(t) \\
+ y_1 + y_2 &= y(u_1 + u_2)\\
+ \alpha y(u) &= \alpha u(t) \\
+ y (\alpha u) &= \alpha u(t) \\
+ \alpha y(u) &= y (\alpha u)
+\end{align*}
+
+For values of $t > \alpha$ the system is also linear, having its output be 0 for all cases of $ t > \alpha$.\\
+
+The system is not time-invariant.
+Consider the case where $t < \alpha, \\ t + T > \alpha$ and $u(t) = u(t+T) > 0$.
+
+\begin{align*}
+ y (t) &= u(t) \\
+ y (t+T) &= 0 \\
+ y (t) &\neq y(t+T)
+\end{align*}
+
+The system's output is not the same, despite the input value being the same at $t$ and $t+T$.
+
+The system is causal.
+The system is memoryless, depending only on the present input value hence not reacting to an input value in the future.
+
+% 2.4
+\item If the operator H is linear, then $P_\alpha y = P_\alpha H u = P_\alpha H P_\alpha u$ is true.
+
+\begin{align*}
+ P_\alpha H u &= \begin{cases}
+                  H u & t \leq \alpha \\
+                  0 & t > \alpha
+                 \end{cases}
+                 \\
+ P_\alpha u &= \begin{cases}
+                  u & t \leq \alpha \\
+                  0 & t > \alpha
+                 \end{cases}
+                 \\
+%  H P_\alpha u &= \begin{cases}
+%                   H u & t \leq \alpha \\
+%                   0 & t > \alpha
+%                  \end{cases}
+%                  \\
+ P_\alpha H P_\alpha u &= \begin{cases}
+                  H u & t \leq \alpha \\
+                  0 & t > \alpha
+                 \end{cases}
+\end{align*}
+
+The systems $P_\alpha H u$  and $P_\alpha H P_\alpha u$ have the same output value for the same values of t, thus it is inferred that $P_\alpha H u  = P_\alpha H P_\alpha u$.
+
+This expression is false if H is a nonlinear operator, because the output of $H P_\alpha u$ would be different from $P_\alpha H u$ for $t > \alpha$.
+
+\begin{align*}
+ \text{Consider } t > \alpha &  \quad H:= u + k\\
+ H P_\alpha u &= k \\
+ P_\alpha H u &= 0 \\
+ H P_\alpha u &\neq P_\alpha H u
+\end{align*}
+
+Consider an operator H that can be nonzero for $t> \alpha$, for example $H: = u + k$.
+It is shown that for $ t \leq \alpha$ the expression $(P_\alpha H u) (t) = (H P_\alpha u)(t)$ is true.
+The same is not true for values of $t > \alpha$.
+
+\begin{align*}
+ \text{Given } H:= u + k & \\
+ (P_\alpha H u) (t) &= \begin{cases}
+                        u + k & t \leq \alpha \\
+                        0 & t > \alpha
+                       \end{cases}
+\\
+(H P_\alpha u)(t) &= \begin{cases}
+                      u + k & t \leq \alpha \\
+                      k & t > \alpha
+                     \end{cases}
+\end{align*}
+
+The expression $(P_\alpha H u) (t) = (H P_\alpha u)(t)$ is thus false.
+
+% 2.5
+\item For $\mathbf x (0) \neq 0$ only statement 2 is true.
+Testing superposition for the three statements at $t_0$ it is shown that statements 1 and 3 are false.
+
+\begin{align*}
+\text{Statement 1} & \\
+ y(u(t_0)) &= \mathbf x(0) \\
+ y(u_1(t_0)) + y(u_2(t_0)) &= \mathbf x(0)  +  \mathbf x(0) = 2 \mathbf x(0)\\
+ y(u_3(t_0)) &= \mathbf x(0) \\
+ y(u_3(t_0)) & \neq y(u_1(t_0)) + y(u_2(t_0))\\
+ \text{Statement 2} & \\
+ 0.5 (y(u_1(t_0)) + y(u_2(t_0))) &= \mathbf x(0)\\
+ y(u_3(t_0)) &= \mathbf x(0) \\
+ y(u_3(t_0)) & = 0.5 ( y(u_1(t_0)) + y(u_2(t_0)))\\
+ \text{Statement 3} & \\
+ y(u_1(t_0)) - y(u_2(t_0)) &= \mathbf x(0)  -  \mathbf x(0) = 0\\
+ y(u_3(t_0)) &= \mathbf x(0) \\
+ y(u_3(t_0)) & \neq y(u_1(t_0)) + y(u_2(t_0))\\
+\end{align*}
+
+For $ \mathbf x (0) = 0$ all statements are true.
+Given that the system starts at rest, then all three statements are true because $y_1(t_0) = y_2(t_0) = y_3(t_0) = 0$.
+%  2.6
+\item Consider $u_1 \neq u_2$, the output for each input would be
+ \begin{align*}
+   y_1 = y(u_1) & = \dfrac{u_1^2(t)}{u_1(t-1)}\\
+   y_2 = y(u_2) & = \dfrac{u_2^2(t)}{u_2(t-1)}
+ \end{align*}
+
+Testing the system for additivity shows that the system does not comply with it.
+ \begin{align*}
+y_1 + y_2 &= \dfrac{u_1^2(t)}{u_1(t-1)} + \dfrac{u_2^2(t)}{u_2(t-1)}\\
+y(u_1 + u_2) &= \dfrac{(u_1(t) + u_2 (t))^2}{u_1(t-1)+u_2(t-1)}\\
+y_1 + y_2 & \neq y(u_1 + u_2)
+ \end{align*}
+
+Testing the system for homogeneity proves that it possesses that property.
+\begin{align*}
+y (\alpha u) &= \dfrac{(\alpha u(t))^2}{\alpha u(t-1)} \\
+&= \dfrac{\alpha u^2(t)}{u(t-1)}\\
+\alpha y(u) &= \alpha  \dfrac{u^2(t)}{u(t-1)}\\
+ y(\alpha u) &= \alpha y (u)
+\end{align*}
+% 2.7
+\item All rational numbers $\alpha$ can be expressed as the ratio of two numbers such that $\alpha = \dfrac{i}{j}, \quad i\neq j$.
+The product of two numbers a and b is defined as the sum of number a a total of b times $a*b = \sum_{i=1}^{n = b} a$.
+Recall that the output response of a system can be expressed as the sum of the zero-input response $f_{zi}$ and the zero-state response $f_{zs}$.
+
+\begin{align*}
+%  f(u, x) &= f_{zi} + f_{zs} = f (0, x) + f (u, 0)\\
+%  &= f (u+0, x+0) = f(u, x) + f(0,0)\\
+ f(n u) &= f(u+u+\dots u) \\
+ &= f(u) + f(u) + \dots + f(u) = n f(u)\\
+ \text{Let } n &= \dfrac{i}{j}\\
+ f(nu) &= f(\dfrac{i}{j}u)\\
+ &= i f(u/j)\\
+ &= \dfrac{i}{j} f(u)\\
+ &= n f(u) \\
+\end{align*}
+
+
+Recall that $\alpha = i/j = n$, thus $\alpha y(u) =y (\alpha u)$.
+
+
+% 2.8
+\item Given $x = t + \tau$ and $y = t - \tau$.
+\begin{align*}
+ x + y &= 2 t \\
+ t &= \dfrac{x+y}{2}\\
+ x - y &= 2 \tau \\
+ \tau &= \dfrac{x-y}{2}\\
+ g(t, \tau) &= g(\dfrac{x+y}{2}, \dfrac{x-y}{2})\\
+ \dfrac{\partial g(t, \tau)}{\partial x} &= \dfrac{\partial g(\dfrac{x+y}{2}, \dfrac{x-y}{2})}{\partial x}
+\end{align*}
+
+Recall the definition of the derivative
+
+\begin{equation*}
+  \dfrac{\partial f(t)}{\partial t} \equiv \lim_{t \rightarrow 0} \frac{f(t+\Delta t) - f(t)}{\Delta t}
+\end{equation*}
+
+We can rewrite the partial derivative of g in the following manner
+
+\begin{align*}
+  \dfrac{\partial g(t,\tau)}{\partial x} &= \lim_{x \rightarrow 0} \frac{  g(\dfrac{x + \Delta x +y}{2}, \dfrac{x + \Delta x-y}{2}) -  g(\dfrac{x+y}{2}, \dfrac{x-y}{2})}{\Delta x}\\
+  &= \lim_{x \rightarrow 0} \frac{  g(\dfrac{x+y}{2} + \dfrac{\Delta x}{2}, \dfrac{x-y}{2} + \dfrac{\Delta x}{2}) -  g(\dfrac{x+y}{2}, \dfrac{x-y}{2})}{\Delta x}\\
+  &= \lim_{x \rightarrow 0} \frac{g(\dfrac{x+y}{2}, \dfrac{x-y}{2}) + g(\dfrac{\Delta x}{2}, \dfrac{\Delta x}{2}) -  g(\dfrac{x+y}{2}, \dfrac{x-y}{2})}{\Delta x}\\
+  &= \lim_{x \rightarrow 0} \frac{  g(\dfrac{x+y}{2}, \dfrac{x-y}{2}) + 0 -  g(\dfrac{x+y}{2}, \dfrac{x-y}{2})}{\Delta x}\\
+  &= 0
+\end{align*}
+
+The function $g(t, \tau)$ does not depend on $x$, it depends only on $t-\tau$.
+
+% 2.9
+\item The impulse response of the system is
+\begin{equation*}
+ g(t) = \begin{cases}
+         t & 0 \leq t < 1\\
+         2 - t & 1 \leq t < 2\\
+        \end{cases}
+\end{equation*}
+
+Similarly, input $u(t)$ is
+
+\begin{equation*}
+u(t) = \begin{cases}
+        1 & 0 \leq t < 1 \\
+        -1 & 1 \leq t < 2 \\
+       \end{cases}
+\end{equation*}
+
+The convolution integral is then $y (t) = g(t)\circledast u(t)$.
+
+\begin{align*}
+ y(t) &= \int_{0}^{t} u(\tau) g(t-\tau)d\tau\\
+ &= \begin{cases}
+     \int_{0}^{t} u(t) g(t-\tau) d\tau & 0 \leq t < 1\\
+     \int_{0}^{t-1} u(\tau) g(t-\tau)d\tau + \int_{t-1}^{1} u(\tau) g(t-\tau)d\tau + \int_{1}^{t} u(\tau) g(t-\tau)d\tau & 1 \leq t < 2\\
+    \end{cases}
+    \\
+     &= \begin{cases}
+     \int_{0}^{t} (1) (t-\tau) d\tau & 0 \leq t < 1\\
+     \int_{0}^{t-1} (1) (t-\tau)d\tau + \int_{t-1}^{1} (1) (2-(t-\tau))d\tau + 0 & 1 \leq t < 2\\
+    \end{cases}
+    \\
+     y(t) &= \begin{cases}
+     \dfrac{1}{2}t^2 & 0 \leq t < 1\\
+     -\dfrac{3}{2}t^2 + 4t - 2 & 1 \leq t < 2\\
+     0 & \text{all other cases}
+    \end{cases}
+\end{align*}
+
+
+
+% 2.10
+\item Assuming that the system is a relaxed system then the transfer function $\hat{g}(s)$ can be obtained using the Laplace transform.
+The impulse response $g(t)$ is the inverse Laplace transform of the transfer function.
+
+\begin{align*}
+  \dfrac{d^2 y}{dt^2} + 2 \dfrac{d y}{dt}  - 3 y &= \dfrac{du}{dt} - u \\
+\hat{y} = \hat{y}(s) &= \mathfrak{L} \{y(t)\}\\
+  s^2 \hat{y} (s) + 2 s \hat{y} (s) - 3 \hat{y}(s) &= s \hat{u}(s) - \hat{u}(s)\\
+  \hat{y} (s^2 +2s -3) = \hat{y} (s-1) (s+3)  &= \hat{u} (s-1) \\
+  \hat{g} = \dfrac{\hat{y}}{\hat{u}} &= \dfrac{1}{s+3}\\
+%   g(t) &= \mathfrak{L}^{-1} \{\hat{g}(s)\}\\
+  g(t) = \mathfrak{L}^{-1} \{\dfrac{1}{s+3}\} &= exp(-3t)
+\end{align*}
+% 2.11
+\item Let $\bar y(t) = g(t) \circledast u(t)$, where $g(t)$ is the impulse response of the system and $u(t)$ is the unit-step function.
+Solve for $g(t)$.
+
+\begin{align*}
+ \mathfrak{L}\{\bar y(t)\} &= \hat y = \hat g \hat u \\
+ \hat u &= \mathfrak{L} \{u(t)\} = s^{-1}\\
+\hat y &= s^{-1} \hat g \\
+\hat g &= s \hat y\\
+g (t) = \mathfrak{L}^{-1} \{\hat g \} &= \mathfrak{L}^-1 \{s \hat y \}\\
+g(t) &= \dfrac{d \bar y}{dt}
+\end{align*}
+
+% 2.12
+\item Apply the Laplace transform to the system of equations and rewrite the system as matrices.
+Because D are polynomials $d/dt$, their Laplace transform are polynomials of the form $\hat D = \hat D(s) = s^n + \alpha_1 s^{n-1} + \dots + \alpha_n$.
+Solve for the transfer matrix $\mathbf G$.
+\begin{align*}
+D_{11}(p) y_1(t) + D_{12}(p)y_2(t) &= N_{11}(p) u_1(t) + N_{12}(p) u_2(t)\\
+D_{21}(p) y_1(t) + D_{22}(p)y_2(t) &= N_{21}(p) u_1(t) + N_{22}(p) u_2(t)\\
+\hat y = \hat y (s) &= \mathfrak{L}\{y (t)\}\\
+\hat D_{11} \hat y_1 + \hat D_{12} \hat y_2 &= \hat N_{11} \hat u_1 + \hat N_{12} \hat u_2 \\
+\hat D_{21} \hat y_1 + \hat D_{22} \hat y_2 &= \hat N_{21} \hat u_1 + \hat N_{22} \hat u_2 \\
+\end{align*}
+
+The system of equations can now be expressed as a product of matrices.
+
+\begin{align*}
+            \begin{pmatrix}
+              \hat D_{11} & \hat D_{12} \\
+              \hat D_{21} & \hat D_{22} \\
+             \end{pmatrix}
+            \begin{pmatrix}
+              \hat y_1 \\
+              \hat y_2
+             \end{pmatrix}
+             &=
+            \begin{pmatrix}
+              \hat N_{11} & \hat N_{12} \\
+              \hat N_{21} & \hat N_{22} \\
+             \end{pmatrix}
+             \begin{pmatrix}
+              \hat u_1 \\
+              \hat u_2
+             \end{pmatrix}
+\\
+\mathbf D = \begin{pmatrix}
+              \hat D_{11} & \hat D_{12} \\
+              \hat D_{21} & \hat D_{22} \\
+             \end{pmatrix}
+             & \quad
+\mathbf N = \begin{pmatrix}
+              \hat N_{11} & \hat N_{12} \\
+              \hat N_{21} & \hat N_{22} \\
+             \end{pmatrix}
+             \\
+\mathbf Y = \begin{pmatrix}
+              \hat y_1 \\
+              \hat y_2
+             \end{pmatrix}
+             & \quad
+\mathbf U = \begin{pmatrix}
+              \hat u_1 \\
+              \hat u_2
+             \end{pmatrix}
+             \\
+\mathbf D \mathbf Y &= \mathbf N \mathbf U\\
+\mathbf G = \mathbf Y \mathbf U ^{-1} &= \mathbf D ^{-1} \mathbf N\\
+\mathbf G = \begin{pmatrix}
+              \hat D_{11} & \hat D_{12} \\
+              \hat D_{21} & \hat D_{22} \\
+             \end{pmatrix} ^{-1}
+             &
+             \begin{pmatrix}
+              \hat N_{11} & \hat N_{12} \\
+              \hat N_{21} & \hat N_{22} \\
+             \end{pmatrix}
+\end{align*}
+
+
+ \end{enumerate}
+
+
+
+
+
+\printbibliography
+
+\end{document}

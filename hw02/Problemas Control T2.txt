@@ -1,0 +1,194 @@
+\noindent\textbf{3.1} Considere la Fig. 3.1. ¿Cual es la representación del vector \textbf{x} con respecto a la base ($\mathbf{q_{1}}$,$\mathbf{i_{2}}$)?¿Cuál es la representación de $\mathbf{q_{1}}$ con respecto a ($\mathbf{i_{2}}$,$\mathbf{q_{2}}$)
+
+\vspace{4mm}
+\noindent\textbf{3.2} ¿Cuál es la norma-1, norma-2 y norma-infinita de los siguientes vectores:
+\begin{equation}
+    \notag\mathbf{x_{1}}=\begin{bmatrix}2\\-3\\1\end{bmatrix}
+    \qquad
+    \mathbf{x_{2}}=\begin{bmatrix}1\\1\\1\end{bmatrix}
+\end{equation}
+
+\vspace{4mm}
+\noindent\textbf{3.3} Encuentre 2 vectores ortonormales que mapean el mismo espacio que los dos vectores del Problema 3.2
+
+\vspace{4mm}
+\noindent\textbf{3.4} Considere una matriz \textbf{A} $m$ x $n$ con $n\neq m$. si todas las columnas de \textbf{A} son ortonormales, entonces $\mathbf{A'A=I_{m}}$. ¿Que se pude decir acerca de $\mathbf{AA'}$?
+
+\vspace{4mm}
+\noindent\textbf{3.5} Encuentre el rango y la nulidad de las siguientes matrices:
+
+\begin{equation}
+    \notag\mathbf{A_{1}}=\begin{bmatrix}0&1&0\\0&0&0\\0&0&1\end{bmatrix}
+    \qquad
+    \mathbf{A_{2}}=\begin{bmatrix}4&1&-1\\3&2&0\\1&1&0\end{bmatrix}
+    \qquad
+    \mathbf{A_{3}}=\begin{bmatrix}1&2&3&4\\0&-1&-2&2\\0&0&0&1\end{bmatrix}
+\end{equation}
+
+\vspace{4mm}
+\noindent\textbf{3.6}Encuentre las bases de los espacios rango y espacio nulo de las matrices en el Problema 3.5.
+
+\vspace{4mm}
+\noindent\textbf{3.7} Considere la ecuación lineal algebraica:
+\begin{equation}
+    \notag\begin{bmatrix}2&-1\\-3&3\\-1&2\end{bmatrix}\mathbf{x}=\begin{bmatrix}1\\0\\1\end{bmatrix}=\mathbf{y}
+\end{equation}
+Se tienen 3 ecuaciones con 2 incógnitas.¿Existe una solución \textbf{X} para la ecuación?,¿Esta solución es única?,¿Existe una solución si $\mathbf{y}={[1\:1\:1]}'$?
+
+\vspace{4mm}
+\noindent\textbf{3.8} Encuentre la solución general de:
+\begin{equation}
+    \notag\begin{bmatrix}1&2&3&4\\0&-1&-2&2\\0&0&0&1\end{bmatrix}\mathbf{x}=\begin{bmatrix}3\\2\\1\end{bmatrix}
+\end{equation}
+¿Cuántos parámetros tiene?
+
+\vspace{4mm}
+\noindent\textbf{3.9} Encuentre la solución del Ejemplo 3.3 que tiene la norma Euclidiana mas pequeña. 
+
+\vspace{4mm}
+\noindent\textbf{3.10} Encuentre la solución en el Problema 3.8 que tiene la norma Euclidiana mas pequeña.
+
+\vspace{4mm}
+\noindent\textbf{3.11} Considere la ecuación:
+\[\mathbf{x}[n]=\mathbf{A}^{n}x[0]+\mathbf{A}^{n-1}\mathbf{b}u[0]+\mathbf{A}^{n-2}\mathbf{b}u[1]+...+\mathbf{Ab}u[n-2]+\mathbf{b}u[n-1]\]
+donde \textbf{A} es una matriz $n$ x $n$ y \textbf{b}es un vector columna $n$ x 1. ¿Bajo que condiciones en  \textbf{A} y \textbf{b} existirán $u[0],u[1],...,u[n-1]$ para cumplir la ecuación para cualquier $\mathbf{x}[n]$ y $\mathbf{x}[0]$. 
+
+\vspace{4mm}
+\noindent\textbf{3.12} Dados:
+\begin{equation}
+    \notag\mathbf{A}=\begin{bmatrix}2&1&0&0\\0&2&1&0\\0&0&2&0\\0&0&0&1]\end{bmatrix}
+    \qquad
+    \mathbf{b}=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}
+    \qquad
+    \mathbf{\bar{b}}=\begin{bmatrix}1\\2\\3\\1\end{bmatrix}
+\end{equation}
+¿Cuáles son las representaciones de \textbf{A} con respecto a la base \{$\mathbf{b,Ab,A^{2}b,A_{3}b}$\} y la base \{$\mathbf{\bar{b},A\bar{b},A^{2}\bar{b},A^{3}\bar{b}}$\} respectivamente?
+
+\vspace{4mm}
+\noindent\textbf{3.13} Encuentre las representaciones en forma de Jordan de las siguientes matrices:
+\begin{equation}
+    \notag\mathbf{A_{1}}=\begin{bmatrix}1&4&10\\0&2&0\\0&0&3\end{bmatrix}
+    \qquad
+    \mathbf{A_{2}}=\begin{bmatrix}0&1&0\\0&0&1\\-2&-4&-3\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+    \notag\mathbf{A_{3}}=\begin{bmatrix}1&4&10\\0&2&0\\0&0&3\end{bmatrix}
+    \qquad
+    \mathbf{A_{2}}=\begin{bmatrix}0&1&0\\0&0&1\\-2&-4&-3\end{bmatrix}
+\end{equation}
+
+\vspace{4mm}
+\noindent\textbf{3.14} Considere la forma compañera de la matriz:
+\[\mathbf{A}=\begin{bmatrix}-\alpha_{1}&-\alpha_{2}&-\alpha_{3}&-\alpha_{4}\\1&0&0&0\\0&1&0&0\\0&0&1&0\end{bmatrix}\]
+Muestre que el polinomio característico de la matriz es:
+\[\Delta(\lambda)=\lambda^{4}+\alpha_{1}\lambda^{3}+\alpha_{2}\lambda^{2}+\alpha_{3}\lambda+\alpha_{4}\]
+Muestre también que si $\lambda_{i}$ es un valor propio de \textbf{A} o una solución de $\Delta(\lambda)=0$, entonces ${[\lambda_{i}^{3}\:\lambda_{i}^{2}\:\lambda_{i}\:1]}'$ es un vector propio de \textbf{A} asociado con $\lambda_{i}$.
+
+\vspace{4mm}
+\noindent\textbf{3.15} Muestre que al determinante \textit{Vandermonde}:
+\[\begin{bmatrix}\lambda_{1}^{3}&\lambda_{2}^{3}&\lambda_{3}^{3}&\lambda_{4}^{3}\\\lambda_{1}^{2}&\lambda_{2}^{2}&\lambda_{3}^{2}&\lambda_{4}^{2}\\\lambda_{1}&\lambda_{2}&\lambda_{3}&\lambda_{4}\\1&1&1&1\end{bmatrix}\]
+igual a $\prod_{1\leq i<j\leq 4}(\lambda_{j}-\lambda{i})$ Asi concluimos que la matriz es no singular, o equivalentemente, los vectores propios son linealmente independientes si todos los valores propios son distintos.
+
+\vspace{4mm}
+\noindent\textbf{3.16} Muestre que la forma compañera de la matriz del Problema 3.14 es no singular si y solo si $\alpha_{4}\neq 0$. Bajo esta suposición, muestre que la inversa es igual a:
+\[\mathbf{A^{-1}}=\begin{bmatrix}0&1&0&0\\0&0&1&0\\0&0&0&1\\-1/\alpha_{4}&-\alpha_{1}/\alpha{4}&-\alpha_{2}/\alpha{4}&-\alpha_{3}/\alpha{4}\end{bmatrix}\]
+
+\vspace{4mm}
+\noindent\textbf{3.17} Considere:
+\[\mathbf{A}=\begin{bmatrix}\lambda&\lambda T&\lambda T^{2}/2\\0&\lambda&\lambda T\\0&0&\lambda\end{bmatrix}\]
+con $\lambda\neq 0$ y $T>0$. Muestre que ${[0\:0\:1]}'$ es un vector propio generalizado de grado 3 y las 3 columnas de:
+\[\mathbf{Q}=\begin{bmatrix}\lambda^{2}T^{2}&\lambda T^{2}&0\\0&\lambda T&0\\0&0&1\end{bmatrix}\]
+
+\noindent Constituye una cadena de vectores propios generalizados de longitud 3. Verifique que:
+
+\[\mathbf{Q^{-1}AQ}=\begin{bmatrix}\lambda&1&0\\0&\lambda &1\\0&0&\lambda\end{bmatrix}\]
+
+\vspace{4mm}
+\noindent\textbf{3.18} Encuentre los polinomios característicos y los polinomios mínimos de las siquientes matrices:
+
+\begin{equation}
+    \notag\begin{bmatrix}\lambda_{1}&1&0&0\\0&\lambda_{1}&1&0\\0&0&\lambda_{1}&0\\0&0&0&\lambda_{2}\end{bmatrix}
+    \qquad
+    \begin{bmatrix}\lambda_{1}&1&0&0\\0&\lambda_{1}&1&0\\0&0&\lambda_{1}&0\\0&0&0&\lambda_{1}\end{bmatrix}
+\end{equation}
+\begin{equation}
+    \notag\begin{bmatrix}\lambda_{1}&1&0&0\\0&\lambda_{1}&0&0\\0&0&\lambda_{1}&0\\0&0&0&\lambda_{1}\end{bmatrix}
+    \qquad
+    \begin{bmatrix}\lambda_{1}&0&0&0\\0&\lambda_{1}&0&0\\0&0&\lambda_{1}&0\\0&0&0&\lambda_{1}\end{bmatrix}
+\end{equation}
+
+\vspace{4mm}
+\noindent\textbf{3.19} Muestre que si $\lambda$ es un valor propio de $\mathbf{A}$ con vector propio $\mathsf{x}$, entonces $f(\lambda)$ es un valor propio de $f(A)$ con un mismo vector propio $\mathbf{x}$
+
+\vspace{4mm}
+\noindent\textbf{3.20} Muestre que si una matriz $n$ x $n$ tiene la propiedad de $\mathbf{A^{k}=0}$ para $k\leq m$ si y solo si $\mathbf{A}$ tiene valores propios 0 con multiplicidad $n$ e índice $m$ o menor. Tal matriz es llamada \textit{matriz nilpotente}.
+
+\vspace{4mm}
+\noindent\textbf{3.21} Dada:
+
+\[\mathbf{A}=\begin{bmatrix}1&1&0\\0&0&1\\0&0&1\end{bmatrix}\]
+Encuentre $\mathbf{A}^{10}$, $\mathbf{A}^{103}$, y $e^{\mathbf{A}t}$.
+
+\vspace{4mm}
+\noindent\textbf{3.22} Use dos diferentes métodos para calcular $e^{\mathbf{A}t}$ para $\mathbf{A}_{1}$ y $\mathbf{A}_{4}$ en el Problema 3.13.
+
+\vspace{4mm}
+\noindent\textbf{3.23} Muestre que funciones de una misma matriz conmutan; esto es:
+\[f(\mathbf{A})g(\mathbf{A})=g(\mathbf{A})f(\mathbf{A})\]
+Consecuentemente tenemos $\mathbf{A}e^{\mathbf{A}t}=e^{\mathbf{A}t}\mathbf{A}$
+
+\vspace{4mm}
+\noindent\textbf{3.24} Sea:
+\[\mathbf{C}=\begin{bmatrix}\lambda_{1}&0&0\\0&\lambda_{2}&0\\0&0&\lambda_{3}\end{bmatrix}\]
+Encuentre una matriz $\mathbf{B}$ tal que $e^{\mathbf{b}}=\mathbf{C}$. Muestre que si $\lambda_{i}=0$ para algún $i$, entonces $\mathbf{B}$ no existe. Sea:
+\[\mathbf{C}=\begin{bmatrix}\lambda&1&0\\0&\lambda&0\\0&0&\lambda\end{bmatrix}\]
+Encuentre una matriz $\mathbf{B}$ tal que $e^{\mathbf{b}}=\mathbf{C}$. ¿Es verdad que, para cualquier $\mathbf{C}$ no singular , existe una matriz $\mathbf{B}$ tal que $e^{\mathbf{b}}=\mathbf{C}$.?
+
+\vspace{4mm}
+\noindent\textbf{3.25} Obtenga los vectores propios de la siguiente matriz:
+
+\[\mathbf{A}=\begin{bmatrix}0&1&0&0\\0&0&1&0\\0&0&0&1\\1&0&0&0\end{bmatrix}\]
+
+\vspace{4mm}
+\noindent\textbf{3.26} Obtenga una matriz de transformación $\mathbf{P}$ tal que  $\mathbf{P^{-1}AP}$ sea diagonal. A esta dada por:
+\[\mathbf{A}=\begin{bmatrix}0&1&0\\3&0&2\\-12&-7&-6\end{bmatrix}\]
+
+\vspace{4mm}
+\noindent\textbf{3.27} Encuentre una matriz de transformación $\mathbf{S}$ tal que  $\mathbf{S^{-1}AS=J}$ donde:
+
+\begin{equation}
+    \notag\mathbf{A}=\begin{bmatrix}4&1&-2\\1&0&2\\1&-1&-3\end{bmatrix}
+    \qquad
+    \mathbf{J}=\begin{bmatrix}3&1&0\\0&3&0\\0&0&1\end{bmatrix}
+\end{equation}
+
+\vspace{4mm}
+\noindent\textbf{3.28} Encuentre la representación en forma canónica de Jordan de las siguientes matrices:
+
+\begin{equation}
+    \notag\mathbf{A_{1}}=\begin{bmatrix}1&4&10\\0&2&0\\0&0&3\end{bmatrix}
+    \qquad
+    \mathbf{A_{2}}=\begin{bmatrix}0&1&0\\0&0&1\\-2&-4&-3\end{bmatrix}
+\end{equation}
+\begin{equation}
+    \notag\mathbf{A_{3}}=\begin{bmatrix}0&4&3\\0&-150&-120\\0&200&160\end{bmatrix}
+    \qquad
+    \mathbf{A_{4}}=\begin{bmatrix}0&4&3\\0&20&16\\0&-25&-20\end{bmatrix}
+\end{equation}
+\begin{equation}
+    \notag\mathbf{A_{5}}=\begin{bmatrix}7/_2&21/_2&14\\-1/_2&-3/_2&-2\\-1/_2&-3/_2&-2\end{bmatrix}
+    \qquad
+    \mathbf{A_{6}}=\begin{bmatrix}0&1&1&1&1\\0&0&1&1&1\\0&0&0&1&1\\0&0&0&0&1\\0&0&0&0&0\end{bmatrix}
+\end{equation}
+
+\vspace{4mm}
+\noindent\textbf{3.29} Encuentre la representación en forma canónica de Jordan de las siguientes matrices:
+
+\begin{equation}
+    \notag\mathbf{A_{1}}=\begin{bmatrix}0&1&0\\0&0&1\\2&1&-2\end{bmatrix}
+    \qquad
+    \mathbf{A_{2}}=\begin{bmatrix}0&1&0\\0&0&1\\-8&-12&-6\end{bmatrix}
+    \qquad
+    \mathbf{A_{3}}=\begin{bmatrix}0&1&0&0\\0&0&1&0\\0&0&0&1\\4&-4&-3&4\end{bmatrix}
+\end{equation}
