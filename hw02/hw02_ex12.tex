@@ -1,21 +1,21 @@
 \item [3.12] Given
 
 \begin{equation*}
- A = \begin{bmatrix}
+ \mathbf{A} = \begin{bmatrix}
       2 & 1 & 0 & 0 \\
       0 & 2 & 1 & 0 \\
       0 & 0 & 2 & 0 \\
       0 & 0 & 0 & 1
      \end{bmatrix}
 \qquad
-b = \begin{bmatrix}
+\mathbf{b} = \begin{bmatrix}
      0 \\
      0 \\
      1 \\
      1
     \end{bmatrix}
 \qquad
-\bar b = \begin{bmatrix}
+\bar{\mathbf{b}} = \begin{bmatrix}
           1 \\
           2\\
           3\\
@@ -23,5 +23,86 @@ b = \begin{bmatrix}
          \end{bmatrix}
 \end{equation*}
 
-what are the representations of $A$ with respect to the basis $[b, \/ Ab, \/A^2 b,\/ A^3b]$ and the basis $[\bar b, \/ A \bar b, \/A^2 \bar b,\/ A^3 \bar b]$, respectively?
+what are the representations of $\mathbf{A}$
+with respect to the basis
+$[\mathbf{b}, \; \mathbf{A}\mathbf{b}, \; \mathbf{A}^2 \mathbf{b},\; \mathbf{A}^3\mathbf{b}]$
+and the basis
+$[\bar{\mathbf{b}}, \; \mathbf{A} \bar{\mathbf{b}}, \; \mathbf{A}^2 \bar{\mathbf{b}},\; \mathbf{A}^3 \bar{\mathbf{b}}]$
+, respectively?
 (Note that the representations are the same!)
+
+\begin{itemize}
+ \item $\mathbf{b}$
+
+ We obtain the vectors that form the basis.
+
+\begin{align*}
+ \mathbf{Ab} &= \begin{bmatrix} 0 & 1 & 2 & 1 \end{bmatrix}'
+ & \mathbf{A}^2\mathbf{b} &= \begin{bmatrix}
+ 1 & 4 & 4 &1
+ \end{bmatrix}'\\
+ \mathbf{A}^3\mathbf{b} &= \begin{bmatrix} 6 & 12 & 8 & 1 \end{bmatrix}'
+ & \mathbf{A}^4\mathbf{b} &= \begin{bmatrix} 24 & 32 & 16 & 1 \end{bmatrix}'\\
+\end{align*}
+
+Verify that the set of vectors $\begin{bmatrix}
+                                 \mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+                                \end{bmatrix}$
+is linearly independent.
+
+\begin{equation*}
+ \det(\begin{bmatrix}
+                                 \mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+                                \end{bmatrix}) = 1
+\end{equation*}
+
+The vectors are indeed linearly independent and can be used as a basis.
+
+\begin{align*}
+ \mathbf{A} (\mathbf{b}) &= \begin{bmatrix}
+                                 \mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+                                \end{bmatrix}
+                                \begin{bmatrix}
+                                 0 &1 &0&0
+                                \end{bmatrix}'\\
+ \mathbf{A}^2 (\mathbf{b}) &= \begin{bmatrix}
+                                 \mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+                                \end{bmatrix}
+                                \begin{bmatrix}
+                                 0 &0 &1&0
+                                \end{bmatrix}'\\
+ \mathbf{A}^3 (\mathbf{b}) &= \begin{bmatrix}
+                                 \mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+                                \end{bmatrix}
+                                \begin{bmatrix}
+                                 0 &0 &0&1
+                                \end{bmatrix}'\\
+ \mathbf{A}^4 (\mathbf{b}) &= \begin{bmatrix}
+                                 \mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+                                \end{bmatrix}
+                                \begin{bmatrix}
+                                 -8 & 20 & -18 & 7
+                                \end{bmatrix}'\\
+\end{align*}
+
+The new representation of $\mathbf{A}$ is
+
+\begin{equation*}
+ \bar{\mathbf{A}} = \begin{bmatrix}
+                     0 & 0 & 0 & -8\\
+                     1 & 0 & 0 & 20\\
+                     0 & 1 & 0 & -18\\
+                     0 & 0 & 1 & 7
+                    \end{bmatrix}
+\end{equation*}
+
+
+
+ \item $\bar{\mathbf{b}}$
+
+ As stated in the problem,
+ the representaion of $\mathbf{A}$ is the same as with
+ $\begin{bmatrix}
+\mathbf{b} & \mathbf{A} \mathbf{b} & \mathbf{A}^2 \mathbf{b} & \mathbf{A}^3 \mathbf{b}
+\end{bmatrix}$
+\end{itemize}

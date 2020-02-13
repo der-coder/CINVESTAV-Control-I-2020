@@ -1,0 +1,265 @@
+[General]
+kile_livePreviewEnabled=false
+kile_livePreviewStatusUserSpecified=false
+kile_livePreviewTool=LivePreview-PDFLaTeX
+lastDocument=hw02/hw02_ex07.tex
+
+[document-settings,item:hw02/hw02_ex01.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02/hw02_ex02.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02/hw02_ex03.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02/hw02_ex04.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02/hw02_ex05.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02/hw02_ex06.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02/hw02_ex07.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:hw02_IsaacAyala.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[item:hw02.kilepr]
+open=false
+order=-1
+
+[item:hw02/hw02_ex01.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex02.tex]
+open=false
+order=1
+
+[item:hw02/hw02_ex03.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex04.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex05.tex]
+open=false
+order=1
+
+[item:hw02/hw02_ex06.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex07.tex]
+open=true
+order=1
+
+[item:hw02/hw02_ex08.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex09.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex0a.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex0b.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex0c.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex0d.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex0e.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex10.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex11.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex12.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex13.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex14.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex15.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex16.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex17.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex18.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex19.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex20.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex21.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex22.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex23.tex]
+open=false
+order=-1
+
+[item:hw02/hw02_ex24.tex]
+open=false
+order=-1
+
+[item:hw02_IsaacAyala.tex]
+open=true
+order=0
+
+[view-settings,view=0,item:hw02/hw02_ex01.tex]
+CursorColumn=3
+CursorLine=139
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,139,2,[,139,2,],139,2
+
+[view-settings,view=0,item:hw02/hw02_ex02.tex]
+CursorColumn=0
+CursorLine=49
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,45,5,[,45,5,],45,5
+
+[view-settings,view=0,item:hw02/hw02_ex03.tex]
+CursorColumn=14
+CursorLine=86
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,92,41,[,92,41,],92,41
+
+[view-settings,view=0,item:hw02/hw02_ex04.tex]
+CursorColumn=21
+CursorLine=11
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,8,44,[,8,44,],8,44
+
+[view-settings,view=0,item:hw02/hw02_ex05.tex]
+CursorColumn=21
+CursorLine=15
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,48,29,[,48,28,],48,29
+
+[view-settings,view=0,item:hw02/hw02_ex06.tex]
+CursorColumn=15
+CursorLine=137
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,142,31,[,142,31,],142,31
+
+[view-settings,view=0,item:hw02/hw02_ex07.tex]
+CursorColumn=28
+CursorLine=59
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,59,27,[,59,27,],59,27
+
+[view-settings,view=0,item:hw02_IsaacAyala.tex]
+CursorColumn=27
+CursorLine=16
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,6,17,[,7,0,],-1,-1

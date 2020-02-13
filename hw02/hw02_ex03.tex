@@ -1,1 +1,95 @@
-\item [3.3] Find two orthonormal vectors that span the same space as the two vectors in Problem 3.2.
+\item [3.3] Find two orthonormal vectors that span
+the same space as the two vectors in Problem 3.2.
+
+We obtain an orthonornal set of vector from
+$\{\mathbf{x}_1, \mathbf{x}_2\}$ employing the
+Schmidt normalization procedure.
+
+\begin{align*}
+ \mathbf{u}_1 & \coloneqq \mathbf{x}_1  & \mathbf{q}_1 \coloneqq \mathbf{u}_1 / \norm{\mathbf{u}_1}\\
+ \mathbf{u}_2 & \coloneqq \mathbf{x}_2 - (\mathbf{q}_1'\mathbf{x}_2)\mathbf{q}_1 & \mathbf{q}_2 \coloneqq \mathbf{u}_2 / \norm{\mathbf{u}_2}\\
+\end{align*}
+
+We first obtain the vectors $\mathbf{u}_1, \mathbf{q}_1$ and $\mathbf{u}_2$.
+
+\begin{align*}
+\mathbf{u}_1 & \coloneqq \mathbf{x}_1 = \begin{bmatrix}
+                                         2\\-3\\1
+                                        \end{bmatrix}
+  \\
+\mathbf{q}_1 & \coloneqq \mathbf{u}_1 / \norm{\mathbf{u}_1}\\
+&= \frac{1}{\sqrt{14}} \begin{bmatrix}
+                        2\\-3\\1
+                       \end{bmatrix}
+                       \\
+\mathbf{u}_2 & \coloneqq \mathbf{x}_2 - (\mathbf{q}_1'\mathbf{x}_2)\mathbf{q}_1\\
+&= \begin{bmatrix}
+    1 \\ 1 \\1
+   \end{bmatrix}
+- \left (
+\frac{1}{\sqrt{14}}\begin{bmatrix}
+   2 & -3 & 1
+  \end{bmatrix}
+  \right )
+\begin{bmatrix}
+ 1\\1\\1
+\end{bmatrix}
+\left (
+\frac{1}{\sqrt{14}}
+\begin{bmatrix}
+ 2\\-3\\1
+\end{bmatrix}
+\right)
+\\
+&= \begin{bmatrix}
+    1 \\ 1 \\1
+   \end{bmatrix}
+   -
+   \frac{1}{14}
+   \left(
+   \begin{bmatrix}
+   2 & -3 & 1
+  \end{bmatrix}
+  \begin{bmatrix}
+ 1\\1\\1
+\end{bmatrix}
+\right)
+\begin{bmatrix}
+ 2\\-3\\1
+\end{bmatrix}\\
+&= \begin{bmatrix}
+    1 \\ 1 \\1
+   \end{bmatrix}
+   -
+   \frac{1}{14}
+(0)
+\begin{bmatrix}
+ 2\\-3\\1
+\end{bmatrix}\\
+&= \begin{bmatrix}
+    1 \\ 1 \\1
+   \end{bmatrix}
+\end{align*}
+
+We notice that the original vectors were already orthogonal to each other.
+Thus, it is only necessary to normalize each of them.
+We continue with the Schmidt normalization procedure as the normalization step is the only one pending.
+
+\begin{align*}
+ \mathbf{q}_2 & \coloneqq \mathbf{u}_2 / \norm{\mathbf{u}_2}\\
+ & = \frac{1}{\sqrt{3}} \begin{bmatrix}
+      1\\1\\1
+     \end{bmatrix}
+\end{align*}
+
+The set of orthonormal vectors $\{\mathbf{q}_1, \, \mathbf{q}_2\}$ has now been obtained, where
+
+\begin{align*}
+ \mathbf{q}_1 &= \frac{1}{\sqrt{14}} \begin{bmatrix}
+                                      2\\-3\\1
+                                     \end{bmatrix}
+\\
+\mathbf{q}_2 &= \frac{1}{\sqrt{3}} \begin{bmatrix}
+                                      1\\1\\1
+                                     \end{bmatrix}
+\end{align*}

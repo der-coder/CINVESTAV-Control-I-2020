@@ -6,7 +6,7 @@
   0 & -1 & -2 & 2\\
   0 & 0 & 0 & 1
  \end{bmatrix}
-x=
+\mathbf{x}=
 \begin{bmatrix}
  3\\
  2\\
@@ -15,3 +15,52 @@ x=
 \end{equation*}
 
 How many parameters do you have?
+
+We first find $\mathbf{x}$ for the system of equations.
+
+\begin{align*}
+  \begin{bmatrix}
+  1 & 2 & 3 & 4\\
+  0 & -1 & -2 & 2\\
+  0 & 0 & 0 & 1
+ \end{bmatrix}
+\begin{bmatrix}
+ x_1 \\x_2 \\x_3 \\x_4
+\end{bmatrix}
+&=
+\begin{bmatrix}
+ 3\\
+ 2\\
+ 1
+\end{bmatrix}\\
+\begin{bmatrix}
+ x_1 + 2 x_2 + 3 x_3 + 4 x_4 \\
+ - x_2 -2 x_3 +2 x_4\\
+ x_4
+\end{bmatrix}
+&= \begin{bmatrix}
+ 3\\
+ 2\\
+ 1
+\end{bmatrix}\\
+x_4 &= 1 \\
+- x_2 -2 x_3 +2 (1) = 2 & \rightarrow x_2 + 2 x_3 = 0\\
+x_1 + 0 + x_2 +  x_3 + 4 (1) = 3 & \rightarrow x_1 +x_2 +x_3 =-1
+\end{align*}
+
+Let $x_2, x_3 = 0$ such that
+
+\begin{equation*}
+ \mathbf{x}_p = \begin{bmatrix} -1 \\ 0 \\0 \\1 \end{bmatrix}
+\end{equation*}
+
+The general solution for the system of equations employs the basis
+of the null space (see Problem 3.6).
+
+\begin{align*}
+ \mathbf{x} &= \mathbf{x}_p + \alpha \mathbf{n}\\
+ \mathbf{x} &= \begin{bmatrix} -1 \\ 0 \\0 \\1 \end{bmatrix}
+        + \alpha \begin{bmatrix}1\\ -2\\ 1\\ 0 \end{bmatrix}
+\end{align*}
+
+There is a single parameter $\alpha$ for the general solution.

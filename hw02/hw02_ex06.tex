@@ -1,1 +1,163 @@
-\item [3.6] Find bases of the range spaces and null spaces of the matrices in Problem 3.5.
+\item [3.6] Find bases of the range spaces and null spaces
+of the matrices in Problem 3.5.
+
+\begin{itemize}
+ \item $\mathbf{A}_1$
+
+ Given that $\mathbf{A}_1 = [\mathbf{a}_1 \,
+\mathbf{a}_2 \, \mathbf{a}_3 ]$, we can construct a basis
+for the range space of the matrix with columns
+$\mathbf{a}_2$ and $\mathbf{a}_3$.
+
+\begin{equation*}
+\text{range space}(\mathbf{A}_1) =
+\left \{ \mathbf{a}_2 , \mathbf{a}_3 \right \} =
+\left \{ \begin{bmatrix} 1 \\ 0 \\ 0  \end{bmatrix},
+\begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}
+\right \}
+\end{equation*}
+
+The basis for the null space of $\mathbf{A}_1$ is determined
+by finding a vector $\mathbf{n}$ that satisfies the equation
+
+\begin{equation*} \mathbf{A}_1 \mathbf{n} = \mathbf{0}
+\end{equation*}
+
+Let $\mathbf{n} = \begin{bmatrix} n_{11} & n_{21} & n_{31}
+\end{bmatrix}'$ and solve the previous system of equations
+for $\mathbf{n}$.
+
+\begin{align*}
+    \mathbf{A}_1 \mathbf{n} &=    \begin{bmatrix}
+                                        0 & 1 & 0\\
+                                        0 & 0 & 0\\
+                                        0 & 0 & 1
+                                    \end{bmatrix}
+                                    \begin{bmatrix}
+                                    n_{11} \\ n_{21} \\ n_{31}
+                                    \end{bmatrix}
+                                = \mathbf{0}\\
+                            &= \begin{bmatrix}
+                                    0 + n_{21} + 0\\
+                                    0 + 0 + 0\\
+                                    0 + 0 + n_{31}
+                                \end{bmatrix}
+                            = \begin{bmatrix}
+                                    0\\0\\0
+                                \end{bmatrix} \\
+                    n_{21} = 0 & \qquad  n_{31} = 0\\
+                    \mathbf{n} &= \begin{bmatrix} n_{11} \\0
+\\0 \end{bmatrix}
+\end{align*}
+
+We propose $n_{11} = 1$ as a particular solution.
+
+\begin{equation*}
+\text{null space}(\mathbf{A}_1) =
+\left \{\mathbf{n} \right\} =
+\left \{ \begin{bmatrix} 1 \\ 0 \\0 \end{bmatrix} \right \}
+\end{equation*}
+
+ \item $\mathbf{A}_2$
+
+ Matrix $\mathbf{A}_2$ is full rank,
+ thus its columns can form a basis for the range space.
+ By consequence the only solution to $\mathbf{A}_2 \mathbf{n} = \mathbf{0}$
+ is the trivial solution.
+
+ \begin{align*}
+ \text{range space}(\mathbf{A}_2)
+    &=
+    \left \{
+    \begin{bmatrix} 4 \\ 3 \\ 1 \end{bmatrix},
+    \begin{bmatrix} 1\\ 2 \\ 1  \end{bmatrix},
+    \begin{bmatrix} -1\\  0\\ 0 \end{bmatrix}
+    \right \}
+    \\
+    \text{null space}(\mathbf{A}_2) &= \begin{bmatrix}
+                                        0\\0\\0
+                                       \end{bmatrix}
+\end{align*}
+
+ \item $\mathbf{A}_3$
+
+ For matrix $\mathbf{A}_3$, three of its four columns can be
+used as a basis for the range space. It is only necessary
+for the set of vectors to be linearly independent. As such,
+the basis of $\mathbf{A}_3$ is constructed as follows
+
+\begin{align*}
+\mathbf{A}_3 &= \begin{bmatrix}
+                    1 & 2 & 3 & 4\\
+                    0 & -1 & -2 & 2\\
+                    0 & 0 & 0 & 1
+                \end{bmatrix}
+            =   \begin{bmatrix}
+                    \mathbf{a}_1 &
+                    \mathbf{a}_2 &
+                    \mathbf{a}_3 &
+                    \mathbf{a}_4
+                \end{bmatrix} \\
+\text{range space}(\mathbf{A}_3) &=
+ \left \{ \mathbf{a}_1 , \mathbf{a}_2 , \mathbf{a}_4 \right \}
+    =
+    \left \{
+    \begin{bmatrix} 1 \\  0  \\ 0  \end{bmatrix},
+    \begin{bmatrix} 2\\   -1\\ 0  \end{bmatrix},
+    \begin{bmatrix}  4\\  2 \\  1 \end{bmatrix}
+    \right \}
+\end{align*}
+
+
+As for the basis for the null space of $\mathbf{A}_3$,
+it is necessary to solve the equation
+$\mathbf{A}_3 \mathbf{n} = \mathbf{0}$.
+
+\begin{align*}
+\mathbf{A}_3 \mathbf{n} =    \begin{bmatrix}
+                                        1 & 2 & 3 & 4\\
+                                        0 & -1 & -2 & 2\\
+                                        0 & 0 & 0 & 1
+                                    \end{bmatrix}
+                                    \begin{bmatrix}
+                                    n_{11} \\ n_{21} \\ n_{31} \\ n_{41}
+                                    \end{bmatrix}
+                                    &= \begin{bmatrix}
+        n_{11} + 2 n_{21} + 3 n_{31} + 4 n_{41}\\
+        0 - n_{21} - 2 n_{31} + 2 n_{41}\\
+        0 + 0 + 0 +  n_{41}
+       \end{bmatrix}\\
+    &= \begin{bmatrix}
+       0 \\ 0 \\ 0
+      \end{bmatrix}\\
+n_{41} &= 0\\
+- n_{21} - 2 n_{31} + 2 (0) = 0
+    & \rightarrow n_{21} = - 2 n_{31} \\
+n_{11} + 2 (-2n_{31}) + 3 n_{31} + 4 (0) = 0
+    & \rightarrow n_{11} = n_{31}\\
+     \mathbf{n} &= \begin{bmatrix}
+                 n_{11}\\
+                 -2 n_{11}\\
+                 n_{11}\\
+                 0
+                \end{bmatrix}
+\end{align*}
+
+We propose $n_{11} = 1$ as a particular solution.
+
+\begin{equation*}
+  \text{null space}(\mathbf{A}_3) = \mathbf{n} = \begin{bmatrix}
+                 1\\
+                 -2\\
+                 1\\
+                 0
+                \end{bmatrix}
+\end{equation*}
+
+
+
+
+\end{itemize}
+
+
+

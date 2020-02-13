@@ -1,15 +1,53 @@
 \item [3.2] What are the 1-norm, 2-norm, and infinite-norm of the vectors
 
 \begin{equation*}
- x_1 = \begin{bmatrix}
+ \mathbf{x_1} = \begin{bmatrix}
       2\\
       -3\\
       1
      \end{bmatrix}
 \qquad
-x_2 = \begin{bmatrix}
+\mathbf{x_2} = \begin{bmatrix}
       1\\
       1\\
       1
      \end{bmatrix}
 \end{equation*}
+
+From \cite{chen1999linear}, we have the
+following definitions for each norm:
+
+\begin{align*}
+\norm{\mathbf{x}}_1 &= \sum_{i=1}^n \abs{x_i}\\
+\norm{\mathbf{x}}_2 &= \left ( \sum_{i=1}^n \abs{x_i}^2 \right)^{1/2}\\
+\norm{\mathbf{x}}_\infty &= \max{}_i \; \abs{x_i}\\
+\end{align*}
+
+The norms for each vector are calculated accordingly.
+\begin{itemize}
+ \item 1-norm
+ \begin{align*}
+ \norm{\mathbf{x_1}}_1 &= 2 + 3 +1\\
+ &= 6\\
+ \norm{\mathbf{x_2}}_1 &= 1+1+1\\
+ &= 3\\
+\end{align*}
+ \item 2-norm
+ \begin{align*}
+\norm{\mathbf{x_1}}_2 &= \sqrt{2^2 + (-3)^2 + 1^2}\\
+&= \sqrt{14} \\
+\norm{\mathbf{x_2}}_2 &= \sqrt{1^2 + 1^2 + 1^2}\\
+&= \sqrt{3} \\
+ \end{align*}
+
+ \item inifinite-norm
+ \begin{align*}
+  \norm{\mathbf{x_1}}_\infty &= \max \{ \abs{2}, \abs{-3}, \abs{1} \}\\
+  &= 3\\
+  \norm{\mathbf{x_2}}_\infty &= \max \{ \abs{1}, \abs{1}, \abs{1}\}\\
+  &= 1\\
+ \end{align*}
+
+\end{itemize}
+
+

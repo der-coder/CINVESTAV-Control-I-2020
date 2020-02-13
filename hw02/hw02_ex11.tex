@@ -1,19 +1,47 @@
 \item [3.11] Consider the equation
 
 \begin{equation*}
- x[n] = A^n x[0] + A^{n-1} b u[0]+ A^{n-2} b u[1]+ \dots A b u[n-2]+ b u[n-1]
+ \mathbf{x}[n] = \mathbf{A}^n x[0] + \mathbf{A}^{n-1} \mathbf{b} u[0]+ \mathbf{A}^{n-2} \mathbf{b} u[1]+ \dots \mathbf{A} \mathbf{b} u[n-2]+ \mathbf{b} u[n-1]
 \end{equation*}
 
-where A is an $n \times n$ matrix and $b$ is an $n \times 1$ column vector.
-Under what conditions on $A$ and $b$ will there exist $u[0], u[1], \dots, u[n-1]$ to meet the equation for any $x[n]$ and $x[0]$?
+where $\mathbf{A}$ is an $n \times n$ matrix and $\mathbf{b}$ is an $n \times 1$ column vector.
+Under what conditions on $\mathbf{A}$ and $\mathbf{b}$
+will there exist $u[0], u[1], \dots, u[n-1]$ to meet
+the equation for any $\mathbf{x}[n]$ and $\mathbf{x}[0]$?
 \emph{Hint}: Write the equation in the form
 
 \begin{equation*}
- x[n] - A^n x[0] = [b \/ Ab \/ \dots A^{n-1}b]
+ \mathbf{x}[n] - \mathbf{A}^n \mathbf{x}[0] = [\mathbf{b} \; \mathbf{A}\mathbf{b} \; \dots \mathbf{A}^{n-1}\mathbf{b}]
  \begin{bmatrix}
  u[n-1]\\
- u[n-1]\\
+ u[n-2]\\
  \vdots \\
  u[0]\\
 \end{bmatrix}
+\end{equation*}
+
+Let
+$\mathbf{C} = [\mathbf{b} \; \mathbf{A}\mathbf{b} \; \dots \mathbf{A}^{n-1}\mathbf{b}]$
+and
+$\mathbf{u} = \begin{bmatrix}
+ u[n-1]&
+ u[n-2]&
+ \cdots &
+ u[0]
+\end{bmatrix}'$
+such that the equation above can be rewritten as
+
+\begin{equation*}
+ \mathbf{x}[n] -  \mathbf{A}^n \mathbf{x}[0] = \mathbf{C} \mathbf{u}
+\end{equation*}
+
+There will exist $\mathbf{u}$ for any
+$\mathbf{x}[n]$ and $\mathbf{x}[0]$
+\emph{if and only if} matrix $\mathbf{C}$ is invertible
+($\mathbf{C}^{-1}$ must exist)
+.
+Such that
+
+\begin{equation*}
+ \mathbf{C}^{-1} (\mathbf{x}[n] -  \mathbf{A}^n \mathbf{x}[0]) =  \mathbf{u}
 \end{equation*}

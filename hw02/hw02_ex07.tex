@@ -6,16 +6,74 @@
   -3 & 3\\
   -1 & 2
  \end{bmatrix}
-x =
+\mathbf{x} =
 \begin{bmatrix}
  1\\
  0\\
  1
 \end{bmatrix}
-= y
+= \mathbf{y}
 \end{equation*}
 
 It has three equations and two unkowns.
-Does a solution x exist in the equations?
+Does a solution $\mathbf{x}$ exist in the equations?
 Is the solution unique?
-Does a solution exist if $y = [1 1 1]'$?
+Does a solution exist if $\mathbf{y} = [1 1 1]'$?\\
+
+Yes, there is a solution to the system of equations. It is
+an \emph{unique} solution.
+This is due to the fact that the
+second row of the expanded matrix is a linear combination of
+the other two rows of the matrix.
+In other words, the rank of the matrix matches
+the number of unkowns ($\rho(\mathbf{A}) = 2$).
+\\
+
+\begin{align*}
+  \begin{bmatrix}
+    2 & -1\\ -3 & 3\\-1 & 2
+  \end{bmatrix}
+  \begin{bmatrix}
+   x_1 \\x_2
+  \end{bmatrix}
+    & =
+    \begin{bmatrix}1\\  0\\  1\end{bmatrix}\\
+    \begin{bmatrix}
+    2 x_1 - x_2\\ -3 x_1 + 3 x_2\\-x_1 + 2 x_2
+  \end{bmatrix} &= \begin{bmatrix}1\\  0\\  1\end{bmatrix}\\
+  -3 x_1 + 3 x_2 = 0 & \rightarrow x_1 = x_2\\
+  2 x_1 - x_2 = 1 & \rightarrow x_1 = 1 \rightarrow x_2 = 1\\
+  - x_1 + 2 x_2 = 1 & \rightarrow x_2 = 1
+\end{align*}
+
+There is no contradiction in the system of equations.
+
+
+
+For $\mathbf{y} = [1 \; 1 \; 1]'$ there is no solution to the system of
+equations.
+The second row is no longer a linear
+combination of the other two.
+When solving the system
+of equations we arrive at a contradiction.
+
+
+\begin{align*}
+  \begin{bmatrix}
+    2 & -1\\ -3 & 3\\-1 & 2
+  \end{bmatrix}
+  \begin{bmatrix}
+   x_1 \\x_2
+  \end{bmatrix}
+    & =
+    \begin{bmatrix}1\\  1\\  1\end{bmatrix}\\
+    \begin{bmatrix}
+    2 x_1 - x_2\\ -3 x_1 + 3 x_2\\-x_1 + 2 x_2
+  \end{bmatrix} &= \begin{bmatrix}1\\  1\\  1\end{bmatrix}\\
+  -3 x_1 + 3 x_2 = 1 & \rightarrow x_1 = x_2 -\frac{1}{3}\\
+  2 x_1 - x_2 = 1 & \rightarrow x_2 = \frac{5}{3} \rightarrow x_1 = \frac{4}{3}\\
+  \text{But} & \\
+  - x_1 + 2 x_2 = 1 & = - \frac{4}{3} + 2 (\frac{5}{3}) = 2 \neq 1
+\end{align*}
+
+We have arrived at a contradiction, thus the system has no solution.

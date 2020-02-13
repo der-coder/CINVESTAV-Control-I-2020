@@ -1,1 +1,48 @@
 \item[3.9] Find the solution in Example 3.3 that has the smallest Euclidean norm.
+
+Given
+
+\begin{align*}
+ \mathbf{x} &= \begin{bmatrix} 0\\-4\\0\\0\end{bmatrix}
+                + \alpha_1 \begin{bmatrix} 1\\1\\-1\\0\end{bmatrix}
+                + \alpha_2\begin{bmatrix} 0\\2\\0\\-1\end{bmatrix}\\
+&= \begin{bmatrix}
+    \alpha_1\\
+    -4 + \alpha_1 +2 \alpha_2\\
+    -\alpha_1\\
+    -\alpha_2
+   \end{bmatrix}
+\end{align*}
+
+We obtain an equation from the Euclidean
+norm of $\mathbf{x}$ and find its minimum.
+
+\begin{align*}
+\norm{\mathbf{x}}_2 &= \sqrt{\alpha_1^2 + (-4+\alpha_1 +2\alpha_2)^2 + \alpha_1^2 + \alpha_2^2}\\
+\norm{\mathbf{x}}_2^2 = f(\alpha_1, \alpha_2 )&= 3 \alpha_1^2 + 5 \alpha_2^2 -8 \alpha_1 -16\alpha_2 +4 \alpha_1\alpha_2 +16\\
+\frac{\partial f}{\partial \alpha_1} = 0 &= 6 \alpha_1 -8 + 4 \alpha_2\\
+\frac{\partial f}{\partial \alpha_2} = 0 &= 10\alpha_2 -16 +4\alpha_1\\
+\begin{bmatrix} 6&4\\4 & 10\end{bmatrix}
+\begin{bmatrix}\alpha_1 \\ \alpha_2\end{bmatrix}
+&= \begin{bmatrix} 8\\16 \end{bmatrix}\\
+\begin{bmatrix}\alpha_1 \\ \alpha_2\end{bmatrix} &=
+\begin{bmatrix}4/11 \\ 16/11 \end{bmatrix}
+\end{align*}
+
+Evaluate $\mathbf{x}$ with the new values for $\alpha_1$ and $\alpha_2$.
+
+\begin{equation*}
+ \mathbf{x} = \begin{bmatrix}
+4/11\\
+-4+(36/11)\\
+-4/11\\
+-16/11
+              \end{bmatrix}
+=
+\begin{bmatrix}
+ 4/11\\
+-8/11\\
+-4/11\\
+-16/11
+\end{bmatrix}
+\end{equation*}
