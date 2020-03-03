@@ -9,3 +9,42 @@ Under this assumption, show that its inverse equals
            -1/\alpha_4 & -\alpha_1/\alpha_4 & -\alpha_2 /\alpha_4 & -\alpha_3 /\alpha_4 \\
           \end{bmatrix}
 \end{equation*}
+
+
+We test the assumption by multiplying $\mathbf{A}$ with the proposed inverse.
+
+\begin{align*}
+ \mathbf{A}\mathbf{A}^{-1} &=
+        \begin{bmatrix}
+      -\alpha_1 & -\alpha_2 & -\alpha_3 & -\alpha_4\\
+      1 & 0 & 0 & 0\\
+      0 & 1 & 0 & 0\\
+      0 & 0 & 1 & 0
+     \end{bmatrix}
+        \begin{bmatrix}
+           0 & 1 & 0 & 0 \\
+           0 & 0 & 1 & 0 \\
+           0 & 0 & 0 & 1 \\
+           -1/\alpha_4 & -\alpha_1/\alpha_4 & -\alpha_2 /\alpha_4 & -\alpha_3 /\alpha_4 \\
+          \end{bmatrix}\\
+    &= \begin{bmatrix}
+        -\alpha_4(-1/\alpha_4) &
+        -\alpha_1 -\alpha_4(-\alpha_1/\alpha_4) &
+        -\alpha_2 -\alpha_4(-\alpha_2/\alpha_4) &
+        -\alpha_3 -\alpha_4(-\alpha_3/\alpha_4) \\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1
+       \end{bmatrix}\\
+    &= \begin{bmatrix}
+        1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1
+       \end{bmatrix}\\
+       &= \mathbf{I}
+\end{align*}
+
+The proposed matrix is indeed the inverse of $\mathbf{A}$.
+For this to be true, $\alpha_4$  must be different from zero.
+If not, then the matrix becomes singular.

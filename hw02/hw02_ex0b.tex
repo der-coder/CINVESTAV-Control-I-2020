@@ -1,9 +1,68 @@
-\item Obtain a transformation matrix $P$ such that $P^{-1}AP$ is diagonal.
-A is given by
+\item Obtain a transformation matrix $\mathbf{P}$
+such that $\mathbf{P}^{-1} \mathbf{A} \mathbf{P}$ is diagonal.
+$\mathbf{A}$ is given by
 \begin{equation*}
  \begin{bmatrix}
   0 & 1 & 0\\
   3 & 0 & 2\\
   -12 & -7 & -6
  \end{bmatrix}
+\end{equation*}
+
+\begin{align*}
+ \lambda \mathbf{I} - \mathbf{A}  &= \begin{bmatrix}
+                                    \lambda & -1 & 0\\
+                                    3 & \lambda & -2 \\
+                                    12 & -7& \lambda+6
+                                     \end{bmatrix}\\
+\Delta (\lambda) &= \det \left(
+\begin{bmatrix}
+                                    \lambda & -1 & 0\\
+                                    3 & \lambda & -2 \\
+                                    12 & -7& \lambda+6
+                                     \end{bmatrix}
+\right)\\
+&= \lambda(\lambda^2 + 6 \lambda -14) +3\lambda +18+24\\
+&= \lambda~~3 +6\lambda^2 -11\lambda +24\\
+&= 0\\
+\end{align*}
+
+The eigenvectors are
+
+\begin{equation*}
+ \lambda = -8.17053 \quad \lambda = 0.41934 \quad \lambda 1.75118
+\end{equation*}
+
+We now solve $(\mathbf{A} - \lambda_i \mathbf{I})\mathbf{q}_ i = \mathbf{0}$ to
+find the eigenvectors.
+These vectors are the columns of $\mathbf{P}$.
+
+\begin{align*}
+ (\mathbf{A} - \lambda_i \mathbf{I})\mathbf{q}_ i &= \mathbf{0}\\
+ \begin{bmatrix}
+  -\lambda & 1 & 0\\
+  3 & -\lambda & 2\\
+  -12 & 7 & -6-\lambda
+ \end{bmatrix}
+ \begin{bmatrix}
+  q_{i1}\\ q_{i2}\\q_{i3}\\
+ \end{bmatrix}
+ & \rightarrow
+ \begin{bmatrix}
+  -\lambda q_{i1} + q_{i2} \\
+  3q_{i1} - \lambda q_{i2} + 2q_{i3}\\
+  -12 q_{i1} + 7 q_{i2} + (-6 -\lambda ) q_{i3}
+ \end{bmatrix}
+ = \begin{bmatrix}
+    0\\0\\0
+   \end{bmatrix}
+\end{align*}
+
+
+\begin{equation*}
+ \mathbf{P} = \begin{bmatrix}
+                0.030373 &  -0.561673  & 0.495818\\
+                -0.248161 & -0.235534 &  0.868269\\
+                0.968243 &  0.793125 &  0.016522
+              \end{bmatrix}
 \end{equation*}

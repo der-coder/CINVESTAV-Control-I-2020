@@ -1,7 +1,7 @@
 \item[3.14] Consider the companion-form matrix
 
 \begin{equation*}
- A = \begin{bmatrix}
+ \mathbf{A} = \begin{bmatrix}
       -\alpha_1 & -\alpha_2 & -\alpha_3 & -\alpha_4\\
       1 & 0 & 0 & 0\\
       0 & 1 & 0 & 0\\
@@ -15,4 +15,73 @@ Show that its characteristic polynomial is given by
 \Delta(\lambda) = \lambda^4 + \alpha_1 \lambda^3 + \alpha_2 \lambda^2 + \alpha_3 \lambda + \alpha_4
 \end{equation*}
 
-Show also that if $\lambda_i$ is an eigenvalue of $A$ or a solution of $\Delta (\lambda) = 0$, then $[\lambda_i^3 \/ \lambda_i^2 \/ \lambda_i \/ 1]'$ is an eigenvector of $A$ associated with $\lambda_i$.
+Show also that if $\lambda_i$ is an eigenvalue of $\mathbf{A}$
+or a solution of $\Delta (\lambda) = 0$,
+then $[\lambda_i^3 \; \lambda_i^2 \; \lambda_i \; 1]'$
+is an eigenvector of $\mathbf{A}$ associated with $\lambda_i$.
+
+We obtain the characteristic polynomial by solving
+$\det(\lambda \mathbf{I}-\mathbf{A}) = \mathbf{0}$.
+
+\begin{align*}
+ \det(\lambda \mathbf{I}-\mathbf{A})
+ &= \det \left (\begin{bmatrix}
+        \lambda + \alpha_1 & \alpha_2 & \alpha_3 & \alpha_4\\
+        -1 & \lambda & 0 & 0\\
+        0 & -1 & \lambda & 0\\
+        0 & 0 & -1 & \lambda
+    \end{bmatrix}\right )\\
+    &= (\lambda+\alpha_1) \det \left( \begin{bmatrix}
+                                       \lambda & 0 & 0\\
+                                       -1 & \lambda & 0\\
+                                       0 & -1 & \lambda
+                                      \end{bmatrix}
+    \right)\\
+    &- (-1) \det \left( \begin{bmatrix}
+                                       \alpha_2 & \alpha_3 & \alpha_4\\
+                                       -1 & \lambda & 0\\
+                                       0 & -1 & \lambda
+                                      \end{bmatrix}
+    \right)\\
+    &= (\lambda+\alpha_1)(\lambda^3) + \alpha_2(\lambda^2) - \alpha_3 (-\lambda) + \alpha_4(1)\\
+    &= \lambda^4 + \alpha_1 \lambda^3 + \alpha_2 \lambda^2 + \alpha_3 \lambda + \alpha_4\\
+    &= \Delta (\lambda)
+\end{align*}
+
+If $\Delta(\lambda_i)= 0$ then
+
+\begin{align*}
+ \Delta (\lambda_i) &= 0\\
+ &= \lambda_i^4 + \alpha_1 \lambda_i^3 + \alpha_2 \lambda_i^2 + \alpha_3 \lambda_i + \alpha_4\\
+ \lambda_i^4 &=- \alpha_1 \lambda_i^3 - \alpha_2 \lambda_i^2 - \alpha_3 \lambda_i - \alpha_4
+\end{align*}
+
+Evaluate $\mathbf{A}\begin{bmatrix}
+                     \lambda_i^3 & \lambda_i^2 & \lambda_i & 1
+                    \end{bmatrix}'
+$.
+
+\begin{align*}
+ \mathbf{A}\begin{bmatrix}
+                     \lambda_i^3 \\ \lambda_i^2 \\ \lambda_i \\ 1
+                    \end{bmatrix} &=
+                    \begin{bmatrix}
+                     - \alpha_1 \lambda_i^3 - \alpha_2 \lambda_i^2 - \alpha_3 \lambda_i - \alpha_4\\
+                     \lambda_i^3 \\ \lambda_i^2 \\ \lambda_i
+                    \end{bmatrix}\\
+                    &= \begin{bmatrix}
+                     \lambda_i^4\\
+                     \lambda_i^3 \\ \lambda_i^2 \\ \lambda_i
+                    \end{bmatrix}\\
+                    \mathbf{A}\begin{bmatrix}
+                     \lambda_i^3 \\ \lambda_i^2 \\ \lambda_i \\ 1
+                    \end{bmatrix}&=\lambda_i \begin{bmatrix}
+                     \lambda_i^3\\
+                     \lambda_i^2 \\ \lambda_i \\ 1
+                    \end{bmatrix}\\
+\end{align*}
+
+The vector $\begin{bmatrix}
+                     \lambda_i^3 & \lambda_i^2 & \lambda_i & 1
+                    \end{bmatrix}'
+$ is an eigenvector.

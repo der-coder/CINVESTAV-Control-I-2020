@@ -1,2 +1,35 @@
-\item [3.20] Show that an $n \times n$ matrix has the property $A^k = 0$ for $k \geq m$ if and only if $A$ has eigenvalues 0 with multiplicity $n$ and index $m$ or less.
-Such a matrix is a \emph nilpotent matrix.
+\item [3.20] Show that an $n \times n$
+matrix has the property $\mathbf{A}^k = \mathbf{0}$ for
+$k \geq m$ if and only if $\mathbf{A}$
+has eigenvalues 0 with multiplicity $n$ and index $m$ or less.
+Such a matrix is a \emph{nilpotent} matrix.
+
+Assume that $\mathbb{A}$ is in Jordan form, such that
+$\mathbf{A}^k = \mathbf{Q} \hat{\mathbf{A}}^k \mathbf{Q}^{-1} $.
+
+Given the premise $\mathbf{A}^k = \mathbf{0}$ then
+$\hat{\mathbf{A}}^k = \mathbf{0}$.
+Recall that
+
+\begin{equation*}
+ \hat{\mathbf{A}} = \begin{bmatrix}
+                     \lambda_1 & 0  & \dots & 0\\
+                     0 & \lambda_2  & \dots & 0\\
+                     \vdots & \vdots& \ddots & \vdots\\
+                     0 & 0 & \dots &  \lambda_n
+                    \end{bmatrix}
+\end{equation*}
+
+where $\lambda_i$ are the eigenvalues of $\mathbf{A}$.
+
+For $\hat{\mathbf{A}}^k = \mathbf{0}$ to be true,
+then the eigenvalues of $\mathbf{A}$ must be zero or there must be
+an eigenvector $\lambda_j = 0$ with multiplicity $n$.
+
+Let A be a diagonal matrix with Jordan blocks $\mathbf{A}_i$
+with eigenvalues zero.
+If $\mathbf{A}^k = \mathbf{0}$ then
+$\mathbf{A}^k = \text{diag}\{\mathbf{A}_1, \mathbf{A}_2, \dots, \mathbf{A}_n\}= \mathbf{0}$.
+For this to be valid for $k \geq m$, the order $n_i$ of all Jordan blocks
+must be $n_i \leq m$.
+Thus, the index of $\mathbf{A}$ must also be m or less.

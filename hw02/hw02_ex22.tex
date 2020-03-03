@@ -1,1 +1,171 @@
-\item [3.22] Use two different methods to compute $e^{At}$ for $A_1$ and $A_4$ in Problem 3.13.
+\item [3.22] Use two different methods to compute $e^{\mathbf{A}t}$ for
+$\mathbf{A}_1$ and $\mathbf{A}_4$ in Problem 3.13.
+
+\begin{itemize}
+ \item $\mathbf{A}_1$
+
+ %% Method 1
+The eigenvalues of the matrix are $\lambda_1 = 1, \lambda_2 = 2, \lambda_3 = 3$.
+ Let $f(\lambda) = \exp(\lambda t)$.
+
+ \begin{align*}
+  \lambda = 1 & \rightarrow f(1) = \exp(t) = \beta_0 + \beta_1 + \beta_2\\
+  \lambda = 2 & \rightarrow f(2) = \exp(2t) = \beta_0 + 2 \beta_1 + 4\beta_2 \\
+  \lambda = 3 & \rightarrow f(3) = \exp(3t) = \beta_0 + 3\beta_1 + 9\beta_2 \\
+%
+  \beta_0 &= 3\exp(t) + 3 \exp(2t) + \exp(3t)\\
+  \beta_1 &= 4 \exp(2t) -1.5 \exp(3t) -2.5 \exp(t)\\
+  \beta_2 &= 0.5(\exp(3t) -2\exp(2t) + \exp(t))
+\end{align*}
+
+\begin{align*}
+    e^{\mathbf{A}t} &= \beta_0 \mathbf{I} +  \beta_1 \mathbf{A} + \beta_2 \mathbf{A}^2\\
+    &= \beta_0 \mathbf{I} +   \beta_1 \begin{bmatrix}
+           1& 4& 10\\
+           0 & 2 & 1\\
+           0 & 0 &3
+          \end{bmatrix}
++
+ \beta_2       \begin{bmatrix}
+            1 & 12 & 40\\
+            0 & 4 & 0\\
+            0 & 0 & 9
+        \end{bmatrix}\\
+         e^{\mathbf{A}t} &=  \begin{bmatrix}
+            e^t & 4 (e^{2t} - e^t) & 5 (e^{3t} - e^t) \\
+            0 & e^{2t} & 0\\
+            0 & 0 & e^{3t}
+        \end{bmatrix}
+ \end{align*}
+
+ %% Method 2
+
+ Employing the representation $\mathbf{A} = \mathbf{Q} \hat{\mathbf{A}} \mathbf{Q}^{-1} $.
+
+ \begin{align*}
+  \mathbf{A}_1 &= \begin{bmatrix}
+                   1 & 4 & 5\\
+                   0 & 1 & 0\\
+                   0 & 0 & 1
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   1 & 0 & 0\\
+                   0 & 2 & 0\\
+                   0 & 0 & 3
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   1 & 4 & 5\\
+                   0 & 1 & 0\\
+                   0 & 0 & 1
+                  \end{bmatrix}^{-1}\\
+e^{\mathbf{A}_1 t} &= \begin{bmatrix}
+                   1 & 4 & 5\\
+                   0 & 1 & 0\\
+                   0 & 0 & 1
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   e^t & 0 & 0\\
+                   0 & e^{2t} & 0\\
+                   0 & 0 & e^{3t}
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   1 & 4 & 5\\
+                   0 & 1 & 0\\
+                   0 & 0 & 1
+                  \end{bmatrix}^{-1}\\
+                &= \begin{bmatrix}
+                    e^t & 4 (e^{2t} - e^t) & 5 (e^{3t} - e^t) \\
+                    0 & e^{2t} & 0\\
+                    0 & 0 & e^{3t}
+                   \end{bmatrix}
+ \end{align*}
+
+
+%%%%%%%%%%%%%%%%%%
+
+ \item $\mathbf{A}_4$
+
+ %% Method1
+There is one eigenvector $\lambda = 0$ with duplicity of 3.
+ Let $f(\lambda) = \exp(\lambda t)$.
+ Then $\frac{d f(\lambda)}{d\lambda} = t \exp(\lambda t)$
+ and
+ $\frac{d^2 f(\lambda)}{d\lambda^2} = t^2 \exp(\lambda t)$
+ .
+
+ \begin{align*}
+  \lambda = 0 & \rightarrow f(0) = \exp(0) = \beta_0 = 1\\
+    &\rightarrow
+    \frac{d f(\lambda)}{d\lambda}\Bigr|_{\substack{\lambda=1}}
+    = t \exp(0) = t = \beta_1\\
+    &\rightarrow
+    \frac{d^2 f(\lambda)}{d\lambda^2}\Bigr|_{\substack{\lambda=1}}
+    = t^2 \exp(0)
+    = t^2
+    = 2 \beta_2\\
+  \beta_0 &= 1\\
+  \beta_1 &= t\\
+  \beta_2 &= \frac{t^2}{2}\\
+\end{align*}
+
+\begin{align*}
+    e^{\mathbf{A}t} &= \beta_0 \mathbf{I} +  \beta_1 \mathbf{A} + \beta_2 \mathbf{A}^2\\
+    &= \mathbf{I} +  t \begin{bmatrix}
+           0 & 4 & 3\\
+           0 & 20 & 16\\
+           0 & -25 & -20
+          \end{bmatrix}
++
+\frac{t^2}{2}  \begin{bmatrix}
+            0 & 5 & 4\\
+            0 & 0 & 0\\
+            0 & 0 & 0
+        \end{bmatrix}\\
+         e^{\mathbf{A}t} &=  \begin{bmatrix}
+            1 & 4t +2.5 t^2 & 3t +2t^2\\
+            0 & 1+20t & 16t \\
+            0 & -25 t & 1-20t
+        \end{bmatrix}\\
+ \end{align*}
+
+ %% Method 2
+  Employing the representation $\mathbf{A} = \mathbf{Q} \hat{\mathbf{A}} \mathbf{Q}^{-1} $.
+
+ \begin{align*}
+  \mathbf{A}_4 &= \begin{bmatrix}
+                   5 & 4 & 0\\
+                   0 & 20 & 1\\
+                   0 & -25 & 0
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   0 & 1 & 0\\
+                   0 & 0 & 1\\
+                   0 & 0 & 0
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   5 & 4 & 0\\
+                   0 & 20 & 1\\
+                   0 & -25 & 0
+                  \end{bmatrix}^{-1}\\
+e^{\mathbf{A}_4 t} &= \begin{bmatrix}
+                   5 & 4 & 0\\
+                   0 & 20 & 1\\
+                   0 & -25 & 0
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   1 & t & t^2/2\\
+                   0 & 1 & t\\
+                   0 & 0 & 1
+                  \end{bmatrix}
+                  \begin{bmatrix}
+                   5 & 4 & 0\\
+                   0 & 20 & 1\\
+                   0 & -25 & 0
+                  \end{bmatrix}^{-1}\\
+                &= \begin{bmatrix}
+                    1 & 4t +2.5 t^2 & 3t +2t^2\\
+                    0 & 1+20t & 16t \\
+                    0 & -25 t & 1-20t
+                   \end{bmatrix}
+ \end{align*}
+\end{itemize}

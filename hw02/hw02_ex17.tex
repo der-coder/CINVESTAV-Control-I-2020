@@ -1,6 +1,6 @@
 \item[3.17] Consider
 \begin{equation*}
- A = \begin{bmatrix}
+ \mathbf{A} = \begin{bmatrix}
       \lambda & \lambda T & \lambda T^2 / 2 \\
       0 &\lambda & \lambda T \\
       0 & 0 & \lambda
@@ -8,9 +8,9 @@
 \end{equation*}
 
 with $\lambda \neq 0$ and $T > 0$.
-Show that $[0 \/ 0 \/ 1]'$ is a generalized eigenvector of grade 3 and the three columns of
+Show that $[0 \; 0 \; 1]'$ is a generalized eigenvector of grade 3 and the three columns of
 \begin{equation*}
- Q = \begin{bmatrix}
+ \mathbf{Q} = \begin{bmatrix}
       \lambda^2 T^2 & \lambda T^2 & 0\\
       0 & \lambda T & 0\\
       0 & 0 & 1
@@ -20,9 +20,149 @@ Show that $[0 \/ 0 \/ 1]'$ is a generalized eigenvector of grade 3 and the three
  Verify
 
  \begin{equation*}
-  Q^{-1} A Q = \begin{bmatrix}
+  \mathbf{Q}^{-1} \mathbf{A} \mathbf{Q} = \begin{bmatrix}
                 \lambda & 1 & 0\\
                 0 & \lambda & 1\\
                 0 & 0 & \lambda
                \end{bmatrix}
  \end{equation*}
+
+ Obtain the eigenvectors of $\mathbf{A}$.
+
+ \begin{equation*}
+  (\mathbf{A} - \lambda \mathbf{I})
+  = \begin{bmatrix}
+        0 & \lambda T & \lambda T^2 / 2 \\
+        0 & 0 & \lambda T \\
+        0 & 0 & 0
+    \end{bmatrix}
+ \end{equation*}
+
+Given $T > 0$ and $\lambda \neq 0$ then $\rho (\mathbf{A}) = 2$.
+Thus its nullity is one.
+
+We construct generalized vectors for the matrix
+employing the same procedure as Problem 3.13.
+
+We obtain the basis.
+
+\begin{align*}
+ (\mathbf{A}-\lambda\mathbf{I}) &= \begin{bmatrix}
+        0 & \lambda T & \lambda T^2 / 2 \\
+        0 & 0 & \lambda T \\
+        0 & 0 & 0
+    \end{bmatrix}\\
+ (\mathbf{A}-\lambda\mathbf{I})^2 &= \begin{bmatrix}
+                                      0 & 0 & \lambda^2 T^2\\
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0
+                                     \end{bmatrix}
+\\
+ (\mathbf{A}-\lambda\mathbf{I})^3 &= \begin{bmatrix}
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0
+                                     \end{bmatrix}
+\end{align*}
+
+Find a solution to
+\begin{align*}
+(\mathbf{A}-\lambda \mathbf{I})^3 \mathbf{v}& = \mathbf{0} \\
+(\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}& = \mathbf{v}_2 \\
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}& = \mathbf{v}_3 \\
+\end{align*}
+
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I})^3 \mathbf{v}& = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I})^3 = \begin{bmatrix}
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}= \begin{bmatrix}
+                            0\\0\\1
+                           \end{bmatrix}
+\end{align*}
+% A^2
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}& = \mathbf{v}_2 \\
+ (\mathbf{A}-\lambda \mathbf{I})^2 = \begin{bmatrix}
+  0 & 0 & \lambda^2 T^2 \\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_2= \begin{bmatrix}
+                            \lambda^2 T^2\\0\\0
+                           \end{bmatrix}
+\end{align*}
+% A
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}& = \mathbf{v}_3 \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+  0 & \lambda T & \lambda T^2/2\\
+  0 & 0 & \lambda T\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_3= \begin{bmatrix}
+                            \lambda T^2 / 2 \\ \lambda T \\ 0
+                           \end{bmatrix}
+\end{align*}
+
+ Thus the Jordan form is
+
+ \begin{align*}
+ \hat {\mathbf{A}} &= \begin{bmatrix}
+                       \lambda & 1 & 0 \\
+                       0 & \lambda & 1 \\
+                       0 & 0 & \lambda
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+   \lambda^2 T^2 & \lambda T^2 /2& 0\\
+      0 & \lambda T & 0\\
+      0 & 0 & 1
+  \end{bmatrix}
+ \end{align*}
+
+ We verify $ \hat{\mathbf{A}}  = \mathbf{Q}^{-1} \mathbf{A} \mathbf{Q} $
+ by performing the multiplication of
+ $\mathbf{Q} \hat{\mathbf{A}} =  \mathbf{A} \mathbf{Q} $.
+
+ \begin{align*}
+  \mathbf{A} \mathbf{Q}  &= \begin{bmatrix}
+      \lambda & \lambda T & \lambda T^2 / 2 \\
+      0 &\lambda & \lambda T \\
+      0 & 0 & \lambda
+     \end{bmatrix}
+     \begin{bmatrix}
+   \lambda^2 T^2 & \lambda T^2 & 0\\
+      0 & \lambda T & 0\\
+      0 & 0 & 1
+  \end{bmatrix}\\
+  &= \begin{bmatrix}
+      \lambda^3 & 3\lambda^2T^2/2 & \lambda T^2/2\\
+      0 & \lambda^2 T & 0\\
+      0 & 0 & \lambda
+     \end{bmatrix}\\
+  %%%%%%%%%%%%%%%%%%%%
+  \mathbf{Q} \hat{\mathbf{A}} &= \begin{bmatrix}
+   \lambda^2 T^2 & \lambda T^2 & 0\\
+      0 & \lambda T & 0\\
+      0 & 0 & 1
+  \end{bmatrix}
+  \begin{bmatrix}
+      \lambda & \lambda T & \lambda T^2 / 2 \\
+      0 &\lambda & \lambda T \\
+      0 & 0 & \lambda
+     \end{bmatrix}\\
+     &= \begin{bmatrix}
+      \lambda^3 & 3\lambda^2T^2/2 & \lambda T^2/2\\
+      0 & \lambda^2 T & 0\\
+      0 & 0 & \lambda
+     \end{bmatrix}
+ \end{align*}
+
+ It is the same matrix, thus we have proofed the original statement.
+
+ \textbf{Note} The matrix $\mathbf{Q}$ presented in the intructions
+ is wrong.
+ The answer provided meets the criteria, whilst the original one does not.

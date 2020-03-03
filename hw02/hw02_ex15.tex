@@ -10,3 +10,104 @@
 
 equals $ \Pi_{1 \leq i < j \leq 4} (\lambda_j - \lambda_i)$.
 Thus we conclude that the matrix is nonsingular or, equivalently, the eigenvectors are linearly independent if all eigenvalues are distinct.
+
+By properties of the determinant, we first subtract
+the fourth column from all other columns.
+
+\begin{equation*}
+\det\left(
+ \begin{bmatrix}
+  \lambda_1^3 & \lambda_2^3 & \lambda_3^3 & \lambda_4^3 \\
+  \lambda_1^2 & \lambda_2^2 & \lambda_3^2 & \lambda_4^2 \\
+  \lambda_1 & \lambda_2 & \lambda_3 & \lambda_4 \\
+  1 & 1 & 1 & 1
+ \end{bmatrix}
+\right)
+=
+\det\left( \begin{bmatrix}
+  \lambda_1^3 -\lambda_4^3 & \lambda_2^3 -\lambda_4^3 & \lambda_3^3 -\lambda_4^3 & \lambda_4^3 \\
+  \lambda_1^2 - \lambda_4^2 & \lambda_2^2 \lambda_4^2 & \lambda_3^2 - \lambda_4^2 & \lambda_4^2 \\
+  \lambda_1 - \lambda_4 & \lambda_2 - \lambda_4& \lambda_3- \lambda_4 & \lambda_4 \\
+  0 & 0 & 0 & 1
+ \end{bmatrix}\right)
+\end{equation*}
+
+The determinant of this $4\times 4$ matrix can then be reduced to
+the determinant of a $3\times 3$ matrix
+because of the zeros in the 4th row.
+
+\begin{equation*}
+\det\left( \begin{bmatrix}
+  \lambda_1^3 -\lambda_4^3 & \lambda_2^3 -\lambda_4^3 & \lambda_3^3 -\lambda_4^3 & \lambda_4^3 \\
+  \lambda_1^2 - \lambda_4^2 & \lambda_2^2 \lambda_4^2 & \lambda_3^2 - \lambda_4^2 & \lambda_4^2 \\
+  \lambda_1 - \lambda_4 & \lambda_2 - \lambda_4& \lambda_3- \lambda_4 & \lambda_4 \\
+  0 & 0 & 0 & 1
+ \end{bmatrix}\right) =
+ \det\left( \begin{bmatrix}
+  \lambda_1^3 -\lambda_4^3 & \lambda_2^3 -\lambda_4^3 & \lambda_3^3 -\lambda_4^3 \\
+  \lambda_1^2 - \lambda_4^2 & \lambda_2^2 \lambda_4^2 & \lambda_3^2 - \lambda_4^2 \\
+  \lambda_1 - \lambda_4 & \lambda_2 - \lambda_4& \lambda_3- \lambda_4\\
+ \end{bmatrix}\right)
+\end{equation*}
+
+From the identity
+
+\begin{equation*}
+ x^m - y^m = (x-y)(x^{m-1}+ x^{m-2}y +  \dots + y^{m-1})
+\end{equation*}
+
+we conclude that for any column $i$, it is divisible by
+$x_i - x_j$.
+This implies that $x_i - x_j$ can also divide the determinant.
+
+\begin{equation*}
+ = (\lambda_1-\lambda_4)(\lambda_2-\lambda_4)(\lambda_3-\lambda_4)
+ \det\left( \begin{bmatrix}
+             \lambda_1^2-\lambda_1\lambda_4 + \lambda_4^2 & \lambda_2^2-\lambda_2\lambda_4 + \lambda_4^2 &\lambda_3^2-\lambda_3\lambda_4 + \lambda_4^2\\
+             \lambda_1+\lambda_4 & \lambda_2+\lambda_4 & \lambda_3+\lambda_4 \\
+             1 & 1 & 1
+            \end{bmatrix}
+ \right)
+\end{equation*}
+
+We continue the use of the two properties presented to further reduce the matrix
+and simplify the result.
+
+\begin{align*}
+ &=\prod_{i<j\leq4} (\lambda_i - \lambda_j) \det\left( \begin{bmatrix}
+             \lambda_1^2-\lambda_1\lambda_4 + \lambda_4^2 & \lambda_2^2-\lambda_2\lambda_4 + \lambda_4^2 &\lambda_3^2-\lambda_3\lambda_4 + \lambda_4^2\\
+             \lambda_1+\lambda_4 & \lambda_2+\lambda_4 & \lambda_3+\lambda_4 \\
+             1 & 1 & 1
+            \end{bmatrix}
+ \right)\\
+ &=\prod_{i<j\leq4} (\lambda_i - \lambda_j) \times\\
+ & \quad \det\left( \begin{bmatrix}
+             (\lambda_1 - \lambda_2)(\lambda_1+\lambda_2+\lambda_4) &
+             (\lambda_2 - \lambda_3)(\lambda_2+\lambda_3+\lambda_4) &
+             \lambda_3^2-\lambda_3\lambda_4 + \lambda_4^2\\
+             \lambda_1 - \lambda_2 & \lambda_2 - \lambda_3 & \lambda_3+\lambda_4\\
+             0 & 0 & 1
+            \end{bmatrix}
+ \right)\\
+  &=\prod_{i<j\leq4} (\lambda_i - \lambda_j)
+ \det\left( \begin{bmatrix}
+             (\lambda_1 - \lambda_2)(\lambda_1+\lambda_2+\lambda_4) &
+             (\lambda_2 - \lambda_3)(\lambda_2+\lambda_3+\lambda_4) \\
+             \lambda_1 - \lambda_2 & \lambda_2 - \lambda_3\\
+            \end{bmatrix}
+ \right)\\
+ &=\prod_{i<j\leq4} (\lambda_i - \lambda_j)(\lambda_1-\lambda_2) (\lambda_2-\lambda_3)
+ \det\left( \begin{bmatrix}
+             \lambda_1+\lambda_2+\lambda_4 &
+             \lambda_2+\lambda_3+\lambda_4 \\
+             1 & 1
+            \end{bmatrix}
+ \right)\\
+ &=\prod_{i<j\leq4} (\lambda_i - \lambda_j)(\lambda_1-\lambda_2) (\lambda_2-\lambda_3)(\lambda_1-\lambda_3)\\
+ &=\prod_{1\leq i<j\leq4} (\lambda_i - \lambda_j)
+\end{align*}
+
+The determinant will be different from zero if all eigenvalues are distinct.
+
+
+% https://www-users.math.umn.edu/~garrett/m/algebra/notes/17.pdf

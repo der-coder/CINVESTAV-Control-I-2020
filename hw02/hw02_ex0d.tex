@@ -1,37 +1,38 @@
-\item Find the Jordan-canonical-form representations of the following matrices:
+\item Find the Jordan-canonical-form
+representations of the following matrices:
 
 \begin{align*}
- A_1 = \begin{bmatrix}
+ \mathbf{A}_1 = \begin{bmatrix}
         1 & 4 &10\\
         0 & 2 & 0\\
         0 & 0 & 3
        \end{bmatrix}
 & \quad
-A_2 = \begin{bmatrix}
+\mathbf{A}_2 = \begin{bmatrix}
         0 & 1 & 0\\
         0 & 0 & 1\\
         -2 & -4 & -3
        \end{bmatrix}
 \\
-A_3 = \begin{bmatrix}
+\mathbf{A}_3 = \begin{bmatrix}
         0 & 4 & 3\\
         0 & -150 & -120\\
         0 & 200 & 160
        \end{bmatrix}
 & \quad
-A_4 = \begin{bmatrix}
+\mathbf{A}_4 = \begin{bmatrix}
         0 & 4 & 3\\
         0 & 20 & 16\\
         0 & -25 & -20
        \end{bmatrix}
 \\
-A_5 = \begin{bmatrix}
+\mathbf{A}_5 = \begin{bmatrix}
         7/2 & 21/2 & 14\\
         -1/2 & -3/2 & -2\\
         -1/2 & -3/2 &-2
        \end{bmatrix}
 & \quad
-A_6 = \begin{bmatrix}
+\mathbf{A}_6 = \begin{bmatrix}
         0 & 1 & 1 & 1 & 1\\
         0 & 0 & 1 & 1 & 1\\
         0 & 0 & 0 & 1 & 1\\
@@ -39,3 +40,595 @@ A_6 = \begin{bmatrix}
         0 & 0 & 0 & 0 & 0
        \end{bmatrix}
 \end{align*}
+
+
+\begin{itemize}
+ \item $\mathbf{A}_1$
+
+ From Problem 3.13 we have:
+
+The matrix is triangular, thus its eigenvalues are the values
+ of the diagonal.
+ \begin{equation*}
+  \hat{\mathbf{A}}_1 = \begin{bmatrix}
+                        1 & 0 &0\\0 & 2 & 0\\0 & 0&3
+                       \end{bmatrix}
+ \end{equation*}
+
+We obtain $\mathbf{Q} = \begin{bmatrix}
+                         \mathbf{q}_1 &\mathbf{q}_2 &\mathbf{q}_3
+                        \end{bmatrix}
+$.
+% q1
+\begin{align*}
+ (\mathbf{A}-\lambda_1) \mathbf{q}_1 &= \mathbf{0}\\
+ \begin{bmatrix}
+    0 & 4 & 10 \\
+     0 & 1 & 0 \\
+    0 & 0 & 2
+    \end{bmatrix}\mathbf{q}_1 &= \mathbf{0}
+\end{align*}
+
+\begin{align*}
+  \begin{bmatrix}
+    0 & 4 & 10 \\
+     0 & 1 & 0 \\
+    0 & 0 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+     1 \\ 0 \\ 0
+    \end{bmatrix}
+    &= \mathbf{0}
+\end{align*}
+% q2
+\begin{align*}
+ (\mathbf{A}-\lambda_2) \mathbf{q}_2 &= \mathbf{0}\\
+ \begin{bmatrix}
+    -1 & 4 & 10 \\
+     0 & 0 & 0 \\
+    0 & 0 & 1
+    \end{bmatrix}\mathbf{q}_2 &= \mathbf{0}
+\end{align*}
+
+\begin{align*}
+  \begin{bmatrix}
+    -1 & 4 & 10 \\
+     0 & 0 & 0 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+     4 \\ 1 \\ 0
+    \end{bmatrix}
+    &= \mathbf{0}
+\end{align*}
+% q3
+\begin{align*}
+ (\mathbf{A}-\lambda_3) \mathbf{q}_3 &= \mathbf{0}\\
+ \begin{bmatrix}
+    -2 & 4 & 10 \\
+     0 & -1 & 0 \\
+    0 & 0 & 0
+    \end{bmatrix}\mathbf{q}_3 &= \mathbf{0}
+\end{align*}
+
+\begin{align*}
+  \begin{bmatrix}
+    -2 & 4 & 10 \\
+     0 & -1 & 0 \\
+    0 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+     5 \\ 0 \\ 1
+    \end{bmatrix}
+    &= \mathbf{0}
+\end{align*}
+
+Thus the Jordan form is
+
+ \begin{align*}
+ \hat{\mathbf{A}}_1 &= \begin{bmatrix}
+                        1 & 0 &0\\0 & 2 & 0\\0 & 0&3
+                       \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+   1 & 4 & 5\\
+   0 & 1 & 0\\
+   0 & 0 &1
+  \end{bmatrix}
+ \end{align*}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \item $\mathbf{A}_2$
+
+ We obtain the eigenvalues of the matrix.
+
+ \begin{align*}
+  \det(\lambda \mathbf{I} - \mathbf{A}_2) &=
+  \det(\begin{bmatrix}
+       \lambda & -1 & 0 \\
+       0 & \lambda & -1 \\
+       2 & 4 & \lambda+3
+      \end{bmatrix})=\mathbf{0}\\
+      &= \lambda (\lambda^2 +3\lambda +4) -2\\
+      &= \lambda^3 +3\lambda^2 + 4 \lambda -2\\
+      &= (\lambda +1) (\lambda +1 + j) (\lambda +1 - j)
+ \end{align*}
+
+
+  \begin{equation*}
+  \hat{\mathbf{A}}_2 = \begin{bmatrix}
+                        -1 & 0 &0\\0 & -1-j & 0\\0 & 0&-1+j
+                       \end{bmatrix}
+ \end{equation*}
+
+ Determine the eigenvectors of matrix $\mathbf{A}_2$.
+
+\begin{align*}
+ (\mathbf{A}-\lambda_1) \mathbf{q}_1 &= \mathbf{0}\\
+ \begin{bmatrix}
+    1 & 1 & 0 \\
+     0 & 1 & 1 \\
+    -2 & -4 & -2
+    \end{bmatrix}\mathbf{q}_1 &= \mathbf{0}
+\end{align*}
+
+\begin{align*}
+  \begin{bmatrix}
+     1 & 1 & 0 \\
+     0 & 1 & 1 \\
+    -2 & -4 & -2
+    \end{bmatrix}
+    \begin{bmatrix}
+     1 \\ -1 \\ 1
+    \end{bmatrix}
+    &= \mathbf{0}
+\end{align*}
+% q2
+\begin{align*}
+ (\mathbf{A}-\lambda_2) \mathbf{q}_2 &= \mathbf{0}\\
+ \begin{bmatrix}
+     1+j & 1 & 0 \\
+     0 & 1+j & 1 \\
+    -2 & -4 & -2+j
+    \end{bmatrix}\mathbf{q}_2 &= \mathbf{0}
+\end{align*}
+
+\begin{align*}
+  \begin{bmatrix}
+     1+j & 1 & 0 \\
+     0 & 1+j & 1 \\
+    -2 & -4 & -2+j
+    \end{bmatrix}
+    \begin{bmatrix}
+     -1 \\ 1+j \\ -2j
+    \end{bmatrix}
+    &= \mathbf{0}
+\end{align*}
+% q3
+\begin{align*}
+ (\mathbf{A}-\lambda_3) \mathbf{q}_3 &= \mathbf{0}\\
+ \begin{bmatrix}
+     1-j & 1 & 0 \\
+     0 & 1-j & 1 \\
+    -2 & -4 & -2-j
+    \end{bmatrix}\mathbf{q}_3 &= \mathbf{0}
+\end{align*}
+
+\begin{align*}
+  \begin{bmatrix}
+     1-j & 1 & 0 \\
+     0 & 1-j & 1 \\
+    -2 & -4 & -2-j
+    \end{bmatrix}
+    \begin{bmatrix}
+     -1 \\ 1-j \\ 2j
+    \end{bmatrix}
+    &= \mathbf{0}
+\end{align*}
+
+Thus the Jordan form is
+ \begin{align*}
+ \hat{\mathbf{A}}_2 &= \begin{bmatrix}
+                        -1 & 0 &0\\0 & -1-j & 0\\0 & 0&-1+j
+                       \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+   1 & -1 & -1\\
+   -1 & 1+j & 1-j\\
+   1 & -2j &2j
+  \end{bmatrix}
+ \end{align*}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \item $\mathbf{A}_3$
+
+  \begin{align*}
+\det(\lambda \mathbf{I} - \mathbf{A}_3) &= \det \left( \begin{bmatrix}
+                                   \lambda & -4 & -3\\
+                                   0 & \lambda +150 & 120\\
+                                   0 & -200 & \lambda -160
+                                  \end{bmatrix}
+ \right)\\
+ &= \lambda((\lambda +150)(\lambda -160)+200(120))\\
+ &= \lambda^2(\lambda-10 )\\
+ \lambda^2(\lambda-10 ) = 0 &\rightarrow \lambda_{1,2} =0, \lambda_3 = 10
+ \end{align*}
+
+ Due to the repeated roots, it is necessary to
+construct generalized eignevectors to form $\mathbf{S}$.
+
+We obtain the basis.
+
+\begin{align*}
+ (\mathbf{A}-\lambda\mathbf{I}) &= \begin{bmatrix}
+                                    -\lambda & 4 & 3\\
+                                    0 &  -150 - \lambda & -120\\
+                                    0 & 200 & 160 -\lambda
+                                   \end{bmatrix}
+\\
+ \lambda = 10 & \rightarrow (\mathbf{A}-\lambda\mathbf{I}) = \begin{bmatrix}
+                                    -10& 4 & 3\\
+                                    0 &  -160 & -120\\
+                                    0 & 200 & 150
+                                   \end{bmatrix}
+\\
+ \lambda = 0 & \rightarrow (\mathbf{A}-\lambda\mathbf{I}) = \begin{bmatrix}
+                                      0 & 4 & 3\\
+                                    0 &  -150 & -120\\
+                                    0 & 200 & 160
+                                     \end{bmatrix}\\
+& \rightarrow (\mathbf{A}-\lambda\mathbf{I})^2 = \begin{bmatrix}
+                                      0 & 0 & 0\\
+                                      0 & -1500 &-1200\\
+                                      0 & 2000 & 1600
+                                     \end{bmatrix}
+\end{align*}
+
+Find a solution to
+\begin{align*}
+(\mathbf{A}- 10\mathbf{I}) \mathbf{v}_3& = \mathbf{0} \\
+(\mathbf{A}-0 \mathbf{I})^2 \mathbf{v}_2 & = \mathbf{0} \\
+(\mathbf{A}- 0\mathbf{I}) \mathbf{v}_2& = \mathbf{v}_1 \\
+\end{align*}
+
+\begin{align*}
+ (\mathbf{A}- 10\mathbf{I}) \mathbf{v}_3& = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+                                    -10& 4 & 3\\
+                                    0 &  -160 & -120\\
+                                    0 & 200 & 150
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_3= \begin{bmatrix}
+                            0\\3\\-4
+                           \end{bmatrix}
+\end{align*}
+% A^2
+\begin{align*}
+ (\mathbf{A}-0 \mathbf{I})^2 \mathbf{v}_2 & = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I})^2 = \begin{bmatrix}
+                                        0 & 0 & 0\\
+                                      0 & -1500 &-1200\\
+                                      0 & 2000 & 1600
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_2= \begin{bmatrix}
+                            1\\-4\\5
+                           \end{bmatrix}
+\end{align*}
+% A
+\begin{align*}
+ (\mathbf{A}- 0\mathbf{I}) \mathbf{v}_2& = \mathbf{v}_1 \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+                                    0 & 4 & 3\\
+                                    0 &  -150 & -120\\
+                                    0 & 200 & 160
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_1= \begin{bmatrix}
+                            -1\\0\\0
+                           \end{bmatrix}
+\end{align*}
+
+ Thus the Jordan form is
+
+ \begin{align*}
+ \mathbf{J} &= \begin{bmatrix}
+                       0 & 1 & 0\\ 0&0&0\\0&0&10
+                      \end{bmatrix}\\
+  \mathbf{S} &= \begin{bmatrix}
+   -1 & 1 & 0\\
+   0 & -4 & 3\\
+   0 & 5 & -4
+  \end{bmatrix}
+ \end{align*}
+
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \item $\mathbf{A}_4$
+
+
+ \begin{align*}
+\det(\lambda \mathbf{I} - \mathbf{A}_3) &= \det \left( \begin{bmatrix}
+                                   \lambda & -4 & -3\\
+                                   0 & \lambda -20 & -16\\
+                                   0 & 25 & \lambda +20
+                                  \end{bmatrix}
+ \right)\\
+ &= \lambda((\lambda -20)(\lambda +20)-25(-16))\\
+ &= \lambda (\lambda^2 -400+400)\\
+ \lambda^3 = 0 &\rightarrow \lambda_{1,2,3} =0
+ \end{align*}
+
+ The new representation of A is then
+
+  \begin{equation*}
+  \hat{\mathbf{A}}_4 = \mathbf{J}  =  \begin{bmatrix}
+                                       \lambda & 1 & 0\\
+                                       0 & \lambda & 1\\
+                                       0 & 0 & \lambda
+                                      \end{bmatrix}
+ = \begin{bmatrix}
+                       0 & 1 & 0\\ 0&0&1\\0&0&0
+                      \end{bmatrix}
+ \end{equation*}
+
+ Due to the repeated eigenvalues of the matrix, it is necessary
+ to obtain generalized vectors for the matrix.
+
+We obtain the basis.
+
+\begin{align*}
+ (\mathbf{A}-\lambda\mathbf{I}) &= \mathbf{A}\\
+ (\mathbf{A}-\lambda\mathbf{I})^2 &= \begin{bmatrix}
+                                      0 & 5 & 4\\
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0
+                                     \end{bmatrix}
+\\
+ (\mathbf{A}-\lambda\mathbf{I})^3 &= \begin{bmatrix}
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0
+                                     \end{bmatrix}
+\end{align*}
+
+Find a solution to
+\begin{align*}
+(\mathbf{A}-\lambda \mathbf{I})^3 \mathbf{v}& = \mathbf{0} \\
+(\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}& = \mathbf{v}_2 \\
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}& = \mathbf{v}_3 \\
+\end{align*}
+
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I})^3 \mathbf{v}& = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I})^3 = \begin{bmatrix}
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}= \begin{bmatrix}
+                            0\\1\\0
+                           \end{bmatrix}
+\end{align*}
+% A^2
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}& = \mathbf{v}_2 \\
+ (\mathbf{A}-\lambda \mathbf{I})^2 = \begin{bmatrix}
+  0 & 5 & 4\\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_2= \begin{bmatrix}
+                            5\\0\\0
+                           \end{bmatrix}
+\end{align*}
+% A
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}& = \mathbf{v}_3 \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+  0 & 4 & 3\\
+  0 & 20 &16\\
+  0 & -25 & -20\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_3= \begin{bmatrix}
+                            4\\20\\-25
+                           \end{bmatrix}
+\end{align*}
+
+ Thus the Jordan form is
+
+ \begin{align*}
+ \hat {\mathbf{A}}_4 &= \begin{bmatrix}
+                       0 & 1 & 0\\ 0&0&1\\0&0&0
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+   5 & 4 & 0\\
+   0 & 20 & 1\\
+   0 & -25 &0
+  \end{bmatrix}
+ \end{align*}
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%
+ \item $\mathbf{A}_5$
+
+We obtain the eigenvalues of the matrix.
+
+\begin{align*}
+ \det(\lambda \mathbf{I} - \mathbf{A}) &=
+ \det\left(
+  \begin{bmatrix}
+    \lambda -7/2 & -21/2 & -14 \\
+    1/2 & \lambda +3/2 & 2\\
+    1/2 & 3/2 & \lambda +2
+    \end{bmatrix}
+\right) = \mathbf{0}
+\end{align*}
+
+The eigenvalue is zero with multiplicity of three.
+
+We construct generalized vectors for the matrix
+employing the same procedure as Problem 3.13.
+
+We obtain the basis.
+
+\begin{align*}
+ (\mathbf{A}-\lambda\mathbf{I}) &= \begin{bmatrix}
+        7/2 & 21/2 & 14 \\
+        -1/2 & -3/2 & -2 \\
+        -1/2 & -3/2 & -2
+    \end{bmatrix}\\
+ (\mathbf{A}-\lambda\mathbf{I})^2 &= \begin{bmatrix}
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0
+                                     \end{bmatrix}
+\\
+ (\mathbf{A}-\lambda\mathbf{I})^3 &= \begin{bmatrix}
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0\\
+                                      0 & 0 & 0
+                                     \end{bmatrix}
+\end{align*}
+
+Find a solution to
+\begin{align*}
+(\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}_3& = \mathbf{0} \\
+(\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}_2& = \mathbf{0} \\
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}_2& = \mathbf{v}_1 \\
+\end{align*}
+
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}_3& = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I})^2 = \begin{bmatrix}
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}= \begin{bmatrix}
+                            0\\1\\-3/4
+                           \end{bmatrix}
+\end{align*}
+% A^2
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}_2& = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I})^2 = \begin{bmatrix}
+  0 & 0 & 0 \\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_2= \begin{bmatrix}
+                            0\\0\\1
+                           \end{bmatrix}
+\end{align*}
+% A
+\begin{align*}
+ (\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}& = \mathbf{v}_3 \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+  0 & 0 & 0\\
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_3= \begin{bmatrix}
+                            14\\-2\\-2
+                           \end{bmatrix}
+\end{align*}
+
+ Thus the Jordan form is
+
+ \begin{align*}
+ \hat {\mathbf{A}} &= \begin{bmatrix}
+                       0 & 1 & 0 \\
+                       0 & 0 & 0 \\
+                       0 & 0 & 0
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+   14& 0 & 0\\
+   -2&0 & 1\\
+   -2 & 1 &-3/4
+  \end{bmatrix}
+ \end{align*}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ \item $\mathbf{A}_6$
+
+ Because the matrix is in triangular form,
+ we know that the eigenvalues of the matrix are all zero.
+
+
+ We obtain the basis for the eigenvectors.
+
+\begin{align*}
+ (\mathbf{A}-\lambda\mathbf{I}) = \begin{bmatrix}
+        0 & 1 & 1 & 1 & 1\\
+        0 & 0 & 1 & 1 & 1\\
+        0 & 0 & 0 & 1 & 1\\
+        0 & 0 & 0 & 0 & 1\\
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+    &
+ (\mathbf{A}-\lambda\mathbf{I})^2 = \begin{bmatrix}
+        0 & 0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+\\
+ (\mathbf{A}-\lambda\mathbf{I})^3 = \begin{bmatrix}
+        0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+&
+ (\mathbf{A}-\lambda\mathbf{I})^4 = \begin{bmatrix}
+        0 & 0 & 0 & 0 & 1\\
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0
+        \end{bmatrix}
+\\
+ (\mathbf{A}-\lambda\mathbf{I})^5 = \begin{bmatrix}
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0\\
+        0 & 0 & 0 & 0 & 0
+        \end{bmatrix}&
+\end{align*}
+
+Find a solution to
+\begin{align*}
+(\mathbf{A}-\lambda \mathbf{I})^5 \mathbf{v}_5& = \mathbf{0} \\
+(\mathbf{A}-\lambda \mathbf{I})^4 \mathbf{v}_5& = \mathbf{v}_4 \\
+(\mathbf{A}-\lambda \mathbf{I})^3 \mathbf{v}_4& = \mathbf{v}_3 \\
+(\mathbf{A}-\lambda \mathbf{I})^2 \mathbf{v}_3& = \mathbf{v}_2 \\
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{v}_2& = \mathbf{v}_1 \\
+\end{align*}
+
+
+ Thus the Jordan form is
+
+ \begin{align*}
+ \hat {\mathbf{A}} &= \begin{bmatrix}
+                       0 & 1 & 0 & 0 & 0\\
+                       0 & 0 & 1 & 0 & 0\\
+                        0 & 0 & 0 & 1 & 0\\
+                        0 & 0 & 0 & 0 & 1\\
+                        0 & 0 & 0 & 0 & 0\\
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+                    1 & 0 & 0 & 0 & 0\\
+                    0 & 1 & -1 & 1 & -1\\
+                    0 & 0 & 1 & -2 & 3\\
+                    0 & 0 & 0 & 1 & -3\\
+                    0 & 0 & 0 & 0 & 1
+  \end{bmatrix}
+ \end{align*}
+
+\end{itemize}

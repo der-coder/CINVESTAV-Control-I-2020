@@ -1,7 +1,25 @@
 \item[3.23] Show that functions of the same matrix commute; that is,
 
 \begin{equation*}
- f(A) g(A) = g(A)f(A)
+ f(\mathbf{A}) g(\mathbf{A}) = g(\mathbf{A})f(\mathbf{A})
 \end{equation*}
 
-Consequently we have $A e^{At} = e^{At} A$.
+Consequently we have $\mathbf{A} e^{\mathbf{A}t} = e^{\mathbf{A}t} \mathbf{A}$.
+
+The functions $f(\mathbf{A})$ and $ g(\mathbf{A})$ can be represented as
+linear combinations of $\mathbf{A}^i$.
+
+\begin{align*}
+ f(\mathbf{A}) &= \alpha_0 \mathbf{I} + \alpha_1 \mathbf{A} + \dots + \alpha_n \mathbf{A}^{n-1}\\
+ g(\mathbf{A}) &= \beta_0 \mathbf{I} + \beta_1 \mathbf{A}^{n-1} + \dots + \beta_n \mathbf{A}^{n-1}\\
+ f(\mathbf{A}) g(\mathbf{A}) &=
+ \alpha_0 \mathbf{I} ( \beta_0 \mathbf{I} + \beta_1 \mathbf{A}^{n-1} + \dots + \beta_n \mathbf{A}^{n-1})
+ + \dots \\
+ & + \alpha_n \mathbf{A}^{n-1} ( \beta_0 \mathbf{I} + \beta_1 \mathbf{A}^{n-1} + \dots + \beta_n \mathbf{A}^{n-1})\\
+ &= \beta_0 \mathbf{I} (\alpha_0 \mathbf{I} + \alpha_1 \mathbf{A} + \dots + \alpha_n \mathbf{A}^{n-1})
+ + \dots \\
+ & +\beta_n \mathbf{A}^{n-1} (\alpha_0 \mathbf{I} + \alpha_1 \mathbf{A} + \dots + \alpha_n \mathbf{A}^{n-1})\\
+ &= g(\mathbf{A})f(\mathbf{A})
+ \end{align*}
+
+ From this proof we conclude that $\mathbf{A} e^{\mathbf{A}t} = e^{\mathbf{A}t} \mathbf{A}$.

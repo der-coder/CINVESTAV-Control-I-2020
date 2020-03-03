@@ -1,21 +1,186 @@
-\item Find the Jordan-canonical-form representations of the following matrices:
+\item Find the Jordan-canonical-form
+representations of the following matrices:
 \begin{align*}
-A_1 = \begin{bmatrix}
+\mathbf{A}_1 = \begin{bmatrix}
         0 & 1 & 0\\
         0 & 0 & 1\\
         2 & 1 & -2
        \end{bmatrix}
 & \quad
-A_2 = \begin{bmatrix}
+\mathbf{A}_2 = \begin{bmatrix}
         0 & 1 & 0\\
         0 & 0 & 1\\
         -8 & -12 & -6
        \end{bmatrix}
 & \quad
-A_3 = \begin{bmatrix}
+\mathbf{A}_3 = \begin{bmatrix}
         0 & 1 & 0 & 0 \\
         0 & 0 & 1 & 0 \\
         0 & 0 & 0 & 1 \\
         4 & -4 & -3 & 4
        \end{bmatrix}
 \end{align*}
+
+
+\begin{itemize}
+ \item $\mathbf{A}_1$
+
+ Determine the eigenvalues of the matrix first.
+
+  \begin{align*}
+  \det(\lambda \mathbf{I} - \mathbf{A}_1) &=
+  \det(\begin{bmatrix}
+       \lambda & -1 & 0 \\
+       0 & \lambda & -1 \\
+       -2 & -1 & \lambda+2
+      \end{bmatrix})=\mathbf{0}\\
+      &= \lambda (\lambda^2 +2\lambda -1) -2\\
+      &= \lambda^3 +2\lambda^2 - \lambda -2\\
+      &= (\lambda -1) (\lambda +1) (\lambda +2)
+ \end{align*}
+
+ Obtain the eigenvectors of the matrix
+
+ \begin{align*}
+(\mathbf{A} - \lambda \mathbf{I}) \mathbf{q}_i &= \mathbf{0}\\
+\begin{bmatrix}
+ -\lambda & 1 & 0\\
+ 0 & -\lambda & 1\\
+ 2 & 1 & - \lambda -2
+\end{bmatrix}
+\begin{bmatrix}
+ q_{i1} \\q_{i2} \\q_{i3}
+\end{bmatrix}
+& \rightarrow
+\begin{bmatrix}
+ -\lambda q_{i1} + q_{i2}\\
+ -\lambda q_{i2} + q_{i3}\\
+ 2 q_{i1} + q_{i2} - (\lambda +2) q_{i3}
+\end{bmatrix}
+\\
+&\rightarrow \begin{bmatrix}
+                          q_{i1}\\ \lambda q_{i1} \\ \lambda^2 q_{i1}
+                         \end{bmatrix}
+\end{align*}
+
+Consider $q_{i1} = 1$.
+
+\begin{align*}
+\lambda = -2 & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                                           1\\-2\\4
+                                          \end{bmatrix}\\
+\lambda = -1 & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                                          1\\-1\\1
+                                          \end{bmatrix}\\
+\lambda = 1 & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                                           1\\1\\1
+                                          \end{bmatrix}\\
+ \end{align*}
+
+
+ The Jordan form is
+
+  \begin{align*}
+ \hat {\mathbf{A}} &= \begin{bmatrix}
+                       -2 & 0 & 0\\
+                       0 & -1 & 0\\
+                       0 & 0 & 1
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+                    1 & 1 & 1\\
+                    -2 & -1 & 1\\
+                    4 & 1 & 1
+  \end{bmatrix}
+ \end{align*}
+
+ \item $\mathbf{A}_2$
+
+ Determine the eigenvalues of the matrix first.
+
+  \begin{align*}
+  \det(\lambda \mathbf{I} - \mathbf{A}_2) &=
+  \det(\begin{bmatrix}
+       \lambda & -1 & 0 \\
+       0 & \lambda & -1 \\
+       8 & 12 & \lambda+6
+      \end{bmatrix})=\mathbf{0}\\
+      &= \lambda (\lambda^2 +6\lambda +12) +8\\
+      &= \lambda^3 +6 \lambda^2 +12 \lambda +8\\
+      &= (\lambda +2)^3
+ \end{align*}
+
+ Obtain the eigenvectors of the matrix
+
+ \begin{align*}
+(\mathbf{A}- \lambda \mathbf{I}) \mathbf{q}_{i} &= \mathbf{0}\\
+&=\begin{bmatrix}
+ -\lambda & 1-\lambda & 0\\
+ 0 & -\lambda & 1\\
+ -8 & -12 & -6 -\lambda
+\end{bmatrix}
+\begin{bmatrix}
+ q_{i1}\\q_{i2}\\q_{i3}
+\end{bmatrix}
+ \end{align*}
+
+   \begin{align*}
+ \hat {\mathbf{A}} &= \begin{bmatrix}
+                       -2 & 1 & 0\\
+                       0 & -2 & 1\\
+                       0 & 0 & -2
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+                    1 & 1 & 3/4\\
+                    -2 & -1 & -1/2\\
+                    4 & 0 & 0
+  \end{bmatrix}
+ \end{align*}
+
+ \item $\mathbf{A}_3$
+
+ Determine the eigenvalues of the matrix first.
+
+  \begin{align*}
+  \det(\lambda \mathbf{I} - \mathbf{A}_1) &=
+  \det\left(\begin{bmatrix}
+       \lambda & -1 & 6 & 0\\
+       0 & \lambda & -1 & 0\\
+       0 & 0 & \lambda & -1\\
+       -4 & 4 & 3 & \lambda -4
+      \end{bmatrix}\right)=\mathbf{0}\\
+      &= (\lambda -1) (\lambda +1) (\lambda -2)^2
+ \end{align*}
+
+ Obtain the eigenvectors of the matrix
+
+ \begin{align*}
+(\mathbf{A}- \lambda \mathbf{I}) \mathbf{q}_{i} &= \mathbf{0}\\
+&=\begin{bmatrix}
+ -\lambda & 1 & 6 & 0\\
+       0 & -\lambda & 1 & 0\\
+       0 & 0 & -\lambda & 1\\
+       4 & -4 & -3 & -\lambda +4
+\end{bmatrix}
+\begin{bmatrix}
+ q_{i1}\\q_{i2}\\q_{i3}\\q_{i4}
+\end{bmatrix}
+ \end{align*}
+
+ The Jordan form is then
+
+  \begin{align*}
+ \hat {\mathbf{A}} &= \begin{bmatrix}
+                       - 1 & 0 & 0 & 0\\
+                       0 & 1 & 0 & 0\\
+                       0 & 0 & 2 & 1\\
+                       0 & 0 & 0 & 2
+                      \end{bmatrix}\\
+  \mathbf{Q} &= \begin{bmatrix}
+                    -1 & 1 & 1 & -3/2\\
+                    1 & 1 & 2 & -2\\
+                    -1 & 1 & 4 & -2\\
+                    1 & 1 & 8 & 0
+  \end{bmatrix}
+ \end{align*}
+
+\end{itemize}

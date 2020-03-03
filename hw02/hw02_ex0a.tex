@@ -1,9 +1,92 @@
 \item Obtain eigenvectors of the following matrix:
 \begin{equation*}
- A = \begin{bmatrix}
+ \mathbf{A} = \begin{bmatrix}
 0 & 1 & 0 & 0\\
 0 & 0 & 1 & 0\\
 0 & 0 & 0 & 1\\
 1 & 0 & 0 & 0
      \end{bmatrix}
 \end{equation*}
+
+We solve the characteristic equation of the matrix.
+
+\begin{align*}
+ \Delta(\lambda) &= \det(\lambda \mathbf{I} - \mathbf{A}) = 0\\
+ &= \det \left(
+ \begin{bmatrix}
+  \lambda & -1 & 0 & 0\\
+  0 & \lambda & -1 & 0\\
+  0 & 0 & \lambda & -1\\
+  -1 & 0 & 0 & \lambda
+ \end{bmatrix}
+ \right)
+\end{align*}
+
+\begin{align*}
+ &= \lambda^4 -1 = (\lambda^2 +1)(\lambda^2 -1)\\
+\lambda &= \pm j, \pm 1
+\end{align*}
+
+We find the eigenvectors of the matrix by solving
+$(\mathbf{A} - \lambda_i \mathbf{I})\mathbf{q}_i = 0$.
+
+\begin{align*}
+(\mathbf{A} - \lambda_i \mathbf{I})\mathbf{q}_i &= \begin{bmatrix}
+                                                    -\lambda & 1 & 0 & 0\\
+                                                    0 & -\lambda & 1 & 0\\
+                                                    0 & 0 & -\lambda & 1\\
+                                                    1 & 0 & 0 & -\lambda
+                                                   \end{bmatrix}
+                                                   \begin{bmatrix}
+                                                    q_{i1}\\
+                                                    q_{i2}\\
+                                                    q_{i3}\\
+                                                    q_{i4}
+                                                   \end{bmatrix}\\
+\begin{bmatrix}
+ -\lambda q_{i1} + q_{i2}\\
+ -\lambda q_{i2}+ q_{i3}\\
+ -\lambda q_{i3}+ q_{i4}\\
+ -\lambda q_{i4}+ q_{i1}\\
+\end{bmatrix} =
+\begin{bmatrix}
+ 0\\0\\0\\0
+\end{bmatrix}
+& \rightarrow
+\mathbf{q}_i = \begin{bmatrix}
+                \lambda q_{i4} \\ \lambda^2 q_{i4} \\ \lambda^3 q_{i4} \\q_{i4}
+               \end{bmatrix}
+\end{align*}
+%
+
+Consider $q_{i4} = 1$ such that
+
+\begin{align*}
+\lambda = j & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                        j\\-1\\-j\\1
+                        \end{bmatrix}\\
+\lambda = -j & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                        -j\\-1\\j\\1
+                        \end{bmatrix}\\
+\lambda = 1 & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                        1\\1\\1\\1
+                        \end{bmatrix}\\
+\lambda = -1 & \rightarrow \mathbf{q}_i = \begin{bmatrix}
+                        -1\\1\\-1\\1
+                        \end{bmatrix}\\
+\end{align*}
+
+Solving for $\mathbf{q}_i$ we obtain the eigenvectors of the matrix.
+
+\begin{align*}
+\mathbf{Q} &= \begin{bmatrix}
+               \mathbf{q}_1 &\mathbf{q}_2 & \mathbf{q}_3 & \mathbf{q}_4 \\
+              \end{bmatrix}\\
+            &= \begin{bmatrix}
+                j & -j & 1 & -1\\
+                -1 & -1 & 1 & 1\\
+                -j & j & 1 & -1\\
+                1 & 1 & 1 & 1
+               \end{bmatrix}
+\end{align*}
+

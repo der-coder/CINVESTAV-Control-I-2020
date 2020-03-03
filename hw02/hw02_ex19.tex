@@ -1,1 +1,24 @@
-\item[3.19] Show that if $\lambda$ is an eigenvalue of $A$ with eigenvector $x$, then $f(\lambda)$ is an eigenvalue of $f(A)$ with the same eigenvector $x$.
+\item[3.19] Show that if $\lambda$ is an eigenvalue of
+$\mathbf{A}$ with eigenvector $\mathbf{x}$,
+then $f(\lambda)$ is an eigenvalue of
+$f(\mathbf{A})$ with the same eigenvector $\mathbf{x}$.
+
+We prove this statement by using the Cayley-Hamilton theorem.
+If $\lambda$ is an eigenvalue of $\mathbf{A}$ then
+
+\begin{equation*}
+ \mathbf{A} \mathbf{x} = \lambda \mathbf{x} \rightarrow
+ \mathbf{A}^n \mathbf{x} = \lambda^n \mathbf{x}
+\end{equation*}
+
+Then $f(\mathbf{A})$ can be expressed as a linear combination of
+linear matrices.
+
+\begin{align*}
+ f(\mathbf{A}) &= \beta_0 \mathbf{I} + \beta_1 \mathbf{A} + \cdots + \beta_n \mathbf{A}^{n-1}\\
+ &= \beta_0 + \beta_1 \lambda + \cdots + \beta_n \lambda^{n-1}\\
+ f(\mathbf{A}) \mathbf{x} &= (\beta_0 + \beta_1 \lambda + \cdots + \beta_n \lambda^{n-1}) \mathbf{x}\\
+ &= f(\lambda) \mathbf{x}
+\end{align*}
+
+This proves that $f(\lambda)$ is an eigenvalue of $f(\mathbf{A})$.

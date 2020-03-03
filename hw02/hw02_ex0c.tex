@@ -1,19 +1,126 @@
-\item Find a transformation matrix $S$ such that
+\item Find a transformation matrix $\mathbf{S}$ such that
 \begin{equation*}
- S^{-1} A S = J
+ \mathbf{S}^{-1} \mathbf{A} \mathbf{S} = \mathbf{J}
 \end{equation*}
 where
 \begin{equation*}
- A = \begin{bmatrix}
+ \mathbf{A} = \begin{bmatrix}
       4 & 1 & -2\\
       1 & 0 & 2\\
       1 & -1 & 3
      \end{bmatrix}
 , \qquad
-J = \begin{bmatrix}
+\mathbf{J} = \begin{bmatrix}
      3 & 1 & 0\\
      0 & 3 & 0\\
      0 & 0 & 1
     \end{bmatrix}
 \end{equation*}
+
+We first obtain the eigenvalues of the matrix.
+
+\begin{align*}
+ \Delta (\lambda) &=
+ \det (\lambda \mathbf{I} - \mathbf{A}) = 0\\
+ &=  \det \left (
+ \begin{bmatrix}
+  \lambda -4 & -1 & 2\\
+  -1 & \lambda & -2\\
+  -1 & 1 & \lambda -3
+ \end{bmatrix}
+ \right)
+\end{align*}
+
+\begin{equation*}
+ \lambda = 3 \quad \lambda = 3 \quad \lambda = 1
+\end{equation*}
+
+Due to the repeated roots, it is necessary to
+construct generalized eignevectors to form $\mathbf{S}$.
+
+We obtain the basis.
+
+\begin{align*}
+ (\mathbf{A}-\lambda\mathbf{I}) &= \begin{bmatrix}
+                                    4-\lambda & 1 & -2\\
+                                    1 & -\lambda &2\\
+                                    1 & -1 & 3 -\lambda
+                                   \end{bmatrix}
+\\
+ \lambda = 1 & \rightarrow (\mathbf{A}-\lambda\mathbf{I}) = \begin{bmatrix}
+                                    3 & 1 & -2\\
+                                    1 & -1 &2\\
+                                    1 & -1 & 2
+                                   \end{bmatrix}
+\\
+ \lambda = 3 & \rightarrow (\mathbf{A}-\lambda\mathbf{I}) = \begin{bmatrix}
+                                      1 & 1 & -2\\
+                                      1 & -3 & 2\\
+                                      1 & -1 & 0
+                                     \end{bmatrix}\\
+& \rightarrow (\mathbf{A}-\lambda\mathbf{I})^2 = \begin{bmatrix}
+                                      0 & 0 & 0\\
+                                      0 & 8 &-8\\
+                                      0 & 4 & -4
+                                     \end{bmatrix}
+\end{align*}
+
+Find a solution to
+\begin{align*}
+(\mathbf{A}- \mathbf{I}) \mathbf{v}_3& = \mathbf{0} \\
+(\mathbf{A}-3 \mathbf{I})^2 \mathbf{v}_2 & = \mathbf{0} \\
+(\mathbf{A}- 3\mathbf{I}) \mathbf{v}_2& = \mathbf{v}_1 \\
+\end{align*}
+
+\begin{align*}
+ (\mathbf{A}- \mathbf{I}) \mathbf{v}_3& = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+                                    3 & 1 & -2\\
+                                    1 & -1 &2\\
+                                    1 & -1 & 2
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_3= \begin{bmatrix}
+                            0\\2\\1
+                           \end{bmatrix}
+\end{align*}
+% A^2
+\begin{align*}
+ (\mathbf{A}-3 \mathbf{I})^2 \mathbf{v}_2 & = \mathbf{0} \\
+ (\mathbf{A}-\lambda \mathbf{I})^2 = \begin{bmatrix}
+  0 & 0 & 0\\
+                                      0 & 8 & -8\\
+                                      0 & 4 & -4
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_2= \begin{bmatrix}
+                            1\\0\\0
+                           \end{bmatrix}
+\end{align*}
+% A
+\begin{align*}
+ (\mathbf{A}- 3\mathbf{I}) \mathbf{v}_2& = \mathbf{v}_1 \\
+ (\mathbf{A}-\lambda \mathbf{I}) = \begin{bmatrix}
+  1 & 1 & -2\\
+                                    1 & -3 &2\\
+                                    1 & -1 & 0
+ \end{bmatrix}
+&\rightarrow \mathbf{v}_1= \begin{bmatrix}
+                            1\\1\\1
+                           \end{bmatrix}
+\end{align*}
+
+ Thus the Jordan form is
+
+ \begin{align*}
+ \mathbf{J} &= \begin{bmatrix}
+                       3 & 1 & 0\\ 0&3&0\\0&0&1
+                      \end{bmatrix}\\
+  \mathbf{S} &= \begin{bmatrix}
+   1 & 1 & 0\\
+   1 & 0 & 2\\
+   1 & 0 & 1
+  \end{bmatrix}
+ \end{align*}
+
+
+
 

@@ -1,31 +1,112 @@
 \item[3.18] Find the characteristic polynomials and the minimal polynomials of the following matrices:
 
 \begin{align*}
- \begin{bmatrix}
+ m_1 = \begin{bmatrix}
   \lambda_1 & 1 & 0 & 0\\
   0 &\lambda_1 & 1 & 0 \\
    0 & 0& \lambda_1  & 0\\
   0 & 0 & 0 &\lambda_2 \\
  \end{bmatrix}
 & \quad
-\begin{bmatrix}
+m_2 = \begin{bmatrix}
   \lambda_1 & 1 & 0 & 0\\
   0 &\lambda_1 & 1 & 0 \\
    0 & 0& \lambda_1  & 0\\
   0 & 0 & 0 &\lambda_1 \\
  \end{bmatrix}
 \\
-\begin{bmatrix}
+m_3 = \begin{bmatrix}
   \lambda_1 & 1 & 0 & 0\\
   0 &\lambda_1 & 0 & 0 \\
    0 & 0& \lambda_1  & 0\\
   0 & 0 & 0 &\lambda_1 \\
  \end{bmatrix}
 & \quad
-\begin{bmatrix}
+m_4 = \begin{bmatrix}
   \lambda_1 & 0 & 0 & 0\\
   0 &\lambda_1 & 0 & 0 \\
    0 & 0& \lambda_1  & 0\\
   0 & 0 & 0 &\lambda_1 \\
  \end{bmatrix}
 \end{align*}
+
+We determine the polynomials employing the following equations
+
+\begin{align*}
+ \Delta(\lambda) &= \det(\lambda \mathbf{I}- \mathbf{A}) = \prod_i (\lambda-\lambda_i)^{n_i}
+ & \text{Characteristic polynomial}\\
+ \psi(\lambda) &= \prod_i (\lambda-\lambda_i)^{\bar{n}_i} \quad
+ & \text{Minimal polynomial}
+\end{align*}
+
+where $\bar{n}_i$ is the largest order of all Jordan blocks of the matrix.
+
+\begin{itemize}
+ \item $m_1$
+
+ For the triangular matrix, the characteristic equation
+ is obtained from the elements in its diagonal.
+ \begin{equation*}
+  \Delta(m_1) = (\lambda - \lambda_1)^3(\lambda - \lambda_2)
+ \end{equation*}
+
+ The Jordan block for this matrix are sizes one and three, thus
+
+ \begin{equation*}
+  \psi (m_1) = \Delta(m_1) = (\lambda - \lambda_1)^3(\lambda - \lambda_2)
+ \end{equation*}
+
+
+ \item $m_2$
+
+  For the triangular matrix, the characteristic equation
+ is obtained from the elements in its diagonal.
+ \begin{equation*}
+  \Delta(m_2) = (\lambda - \lambda_1)^4
+ \end{equation*}
+
+ The Jordan block for this matrix
+ ($\mathbf{J} = \begin{bmatrix}
+                    \lambda_1 & 1 & 0\\
+                    0 & \lambda_1 & 1\\
+                    0 & 0 & \lambda_1
+                \end{bmatrix}$)
+ is size three, thus
+
+ \begin{equation*}
+  \psi (m_2) = (\lambda - \lambda_1)^3
+ \end{equation*}
+
+ \item $m_3$
+
+   For the triangular matrix, the characteristic equation
+ is obtained from the elements in its diagonal.
+ \begin{equation*}
+  \Delta(m_3) = (\lambda - \lambda_1)^4
+ \end{equation*}
+
+ The Jordan block for this matrix ($\mathbf{J} = \begin{bmatrix}
+                                    \lambda_1 & 1 \\
+                                    0 & \lambda_1
+                                    \end{bmatrix}$)
+is size two, thus
+
+ \begin{equation*}
+  \psi (m_3) = (\lambda - \lambda_1)^2
+ \end{equation*}
+
+ \item $m_4$
+
+  For the triangular matrix, the characteristic equation
+ is obtained from the elements in its diagonal.
+ \begin{equation*}
+  \Delta(m_4) = (\lambda - \lambda_1)^4
+ \end{equation*}
+
+ The Jordan block for this matrix is size one, thus
+
+ \begin{equation*}
+  \psi (m_4)  = (\lambda - \lambda_1)
+ \end{equation*}
+
+\end{itemize}

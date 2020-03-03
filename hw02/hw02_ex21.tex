@@ -1,4 +1,4 @@
-\item [3.21] GIven
+\item [3.21] Given
 
 \begin{equation*}
  A = \begin{bmatrix}
@@ -8,4 +8,127 @@
      \end{bmatrix}
 \end{equation*}
 
-find $A^{10}$, $A^{103}$, and $e^{At}$.
+find $\mathbf{A}^{10}$, $\mathbf{A}^{103}$, and $e^{\mathbf{A}t}$.
+
+We first determine the eigenvalues of $\mathbf{A}$.
+
+\begin{equation*}
+ \lambda_1 = 1  \qquad \lambda_2 = 0  \qquad  \lambda_3 = 1
+\end{equation*}
+
+Let $h(\lambda) = \beta_0 + \beta_1 \lambda + \beta_2 \lambda^2$.
+From Cayley-Hamilton's theorem, we know that $f(\lambda) = f(\mathbf{A})$.
+Using this property, we calculate the three functions given by finding
+linear combinations of the basis $\begin{bmatrix}
+                                   \mathbf{I} & \mathbf{A} & \mathbf{A}^2
+                                  \end{bmatrix}
+$
+
+
+\begin{itemize}
+ \item $\mathbf{A}^{10}$
+
+ Let $f(\lambda) = \lambda^{10}$.
+ Then $\frac{d f(\lambda)}{d\lambda} = 10 \lambda^9$.
+
+ \begin{align*}
+  \lambda = 0 & \rightarrow f(0) = 0^{10} = \beta_0 = 0\\
+  \lambda = 1 & \rightarrow f(1) = 1^{10} = \beta_1 + \beta_2 = 1\\
+  &\rightarrow \frac{d f(\lambda)}{d\lambda}\Bigr|_{\substack{\lambda=1}} = 10 = \beta_1 + 2 \beta_2\\
+  \beta_0 &= 0\\
+  \beta_1 &= -8\\
+  \beta_2 &= 9\\
+  \mathbf{A}^2 &= \begin{bmatrix}
+                   1 & 1&1\\
+                   0 &0&1\\
+                   0 &0 &1
+                  \end{bmatrix}\\
+    \mathbf{A}^{10} &= \beta_0 \mathbf{I} +  \beta_1 \mathbf{A} + \beta_2 \mathbf{A}^2\\
+    &= -8 \begin{bmatrix}
+           1& 1& 0\\
+           0 & 0 & 1\\
+           0 & 0 &1
+          \end{bmatrix}
++
+9       \begin{bmatrix}
+            1 & 1&1\\
+            0 &0&1\\
+            0 &0 &1
+        \end{bmatrix}\\
+         \mathbf{A}^{10} &=  \begin{bmatrix}
+            1 & 1&9\\
+            0 &0&1\\
+            0 &0 &1
+        \end{bmatrix}\\
+ \end{align*}
+
+
+ \item $\mathbf{A}^{103}$
+
+  Let $f(\lambda) = \lambda^{103}$.
+ Then $\frac{d f(\lambda)}{d\lambda} = 103 \lambda^{102}$.
+
+ \begin{align*}
+  \lambda = 0 & \rightarrow f(0) = 0^{103} = \beta_0 = 0\\
+  \lambda = 1 & \rightarrow f(1) = 1^{103} = \beta_1 + \beta_2 = 1\\
+  &\rightarrow \frac{d f(\lambda)}{d\lambda}\Bigr|_{\substack{\lambda=1}} = 103 = \beta_1 + 2 \beta_2\\
+  \beta_0 &= 0\\
+  \beta_1 &= -101\\
+  \beta_2 &= 102\\
+\end{align*}
+
+\begin{align*}
+    \mathbf{A}^{103} &= \beta_0 \mathbf{I}+  \beta_1 \mathbf{A} + \beta_2 \mathbf{A}^2\\
+    &= -101 \begin{bmatrix}
+           1& 1& 0\\
+           0 & 0 & 1\\
+           0 & 0 &1
+          \end{bmatrix}
++
+102       \begin{bmatrix}
+            1 & 1&1\\
+            0 &0&1\\
+            0 &0 &1
+        \end{bmatrix}\\
+         \mathbf{A}^{103} &=  \begin{bmatrix}
+            1 & 1&102\\
+            0 &0&1\\
+            0 &0 &1
+        \end{bmatrix}\\
+ \end{align*}
+
+ \item $e^{\mathbf{A}t}$
+\end{itemize}
+
+  Let $f(\lambda) = \exp(\lambda t)$.
+ Then $\frac{d f(\lambda)}{d\lambda} = t \exp(\lambda t)$.
+
+ \begin{align*}
+  \lambda = 0 & \rightarrow f(0) = \exp(0) = \beta_0 = 1\\
+  \lambda = 1 & \rightarrow f(1) = \exp(t) = 1 + \beta_1 + \beta_2 \\
+  &\rightarrow \frac{d f(\lambda)}{d\lambda}\Bigr|_{\substack{\lambda=1}} = t \exp(t) = \beta_1 + 2 \beta_2\\
+  \beta_0 &= 1\\
+  \beta_1 &= (2-t) \exp(t) -2\\
+  \beta_2 &= (t-1) \exp(t) +1\\
+\end{align*}
+
+\begin{align*}
+    e^{\mathbf{A}t} &= \beta_0 \mathbf{I} +  \beta_1 \mathbf{A} + \beta_2 \mathbf{A}^2\\
+    &= \mathbf{I} +  ((2-t) e^t -2) \begin{bmatrix}
+           1& 1& 0\\
+           0 & 0 & 1\\
+           0 & 0 &1
+          \end{bmatrix}
++
+((t-1) e^t +1)       \begin{bmatrix}
+            1 & 1&1\\
+            0 &0&1\\
+            0 &0 &1
+        \end{bmatrix}\\
+         e^{\mathbf{A}t} &=  \begin{bmatrix}
+            e^t & e^t -1 & t e^t - e^t +1 \\
+            0 & 1 & e^t -1\\
+            0 & 0 & e^t
+        \end{bmatrix}\\
+ \end{align*}
+

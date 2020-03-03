@@ -1,23 +1,76 @@
 \item[3.24] Let
 
 \begin{equation*}
-C = \begin{bmatrix}
+\mathbf{C} = \begin{bmatrix}
  \lambda_1 & 0 & 0\\
  0 &  \lambda_2 & 0\\
  0 & 0 & \lambda_3
 \end{bmatrix}
 \end{equation*}
 
-Find a matrix $B$ such that $e^B = C$.
-Show that if $\lambda_i = 0$ for some i, then $B$ does not exist.
+Find a matrix $\mathbf{B}$ such that $e^{\mathbf{B}} = \mathbf{C}$.
+Show that if $\lambda_i = 0$ for some i, then $\mathbf{B}$ does not exist.
 Let
 \begin{equation*}
- C = \begin{bmatrix}
+ \mathbf{C} = \begin{bmatrix}
       \lambda & 1 & 0\\
       0 & \lambda & 0\\
       0 & 0 & \lambda
      \end{bmatrix}
 \end{equation*}
 
-Find a $B$ such that $e^B = C$.
-Is it true that, for any nonsingular $C$, there exists a matrix $B$ such that $e^B = C$?
+Find a $\mathbf{B}$ such that $e^{\mathbf{B}} = \mathbf{C}$.
+Is it true that, for any nonsingular $\mathbf{C}$,
+there exists a matrix $\mathbf{B}$ such that $e^{\mathbf{B}} = \mathbf{C}$?
+
+
+Using properties of logarithms we can find $\mathbf{B}$ as a
+function of $\mathbf{C}$.
+
+\begin{align*}
+ \exp(\mathbf{B})   &= \mathbf{C}\\
+                    &= \begin{bmatrix}
+                        \lambda_1 & 0 & 0\\
+                        0 & \lambda_2 & 0\\
+                        0 & 0 & \lambda_3
+                       \end{bmatrix}\\
+\ln(\exp(\mathbf{B})) &= \ln(\mathbf{C})\\
+\mathbf{B} &= \begin{bmatrix}
+                \ln(\lambda_1) & 0 & 0\\
+                0 & \ln(\lambda_2 )& 0\\
+                0 & 0 & \ln(\lambda_3)
+                \end{bmatrix}
+\end{align*}
+
+This holds true as long as $\lambda_i \neq 0$ because $\ln(0)$ is not defined.
+
+For
+
+\begin{equation*}
+ \mathbf{C} = \begin{bmatrix}
+      \lambda & 1 & 0\\
+      0 & \lambda & 0\\
+      0 & 0 & \lambda
+     \end{bmatrix}
+\end{equation*}
+
+we employ the representation $\mathbf{Q} \hat{\mathbf{C}} \mathbf{Q}^{-1}$.
+
+\begin{align*}
+ \exp(\mathbf{B})   &= \mathbf{C}\\
+                    &= \mathbf{Q} \hat{\mathbf{C}} \mathbf{Q}^{-1}\\
+                    &= \begin{bmatrix}
+                        \lambda & 1 & 0\\
+                        0 & \lambda & 0\\
+                        0 & 0 & \lambda
+                       \end{bmatrix}\\
+\ln(\exp(\mathbf{B})) &= \ln(\mathbf{C})\\
+\mathbf{B} &= \begin{bmatrix}
+                \ln(\lambda) & 1/\lambda & 0\\
+                0 & \ln(\lambda ) & 0\\
+                0 & 0 & \ln(\lambda)
+                \end{bmatrix}\\
+            &= \mathbf{Q} \ln(\hat{\mathbf{C}}) \mathbf{Q}^{-1}\\
+\end{align*}
+
+For $\hat{\mathbf{C}}$ to exist, $\mathbf{C}$ must be nonsingular.
